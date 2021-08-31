@@ -1,0 +1,19 @@
+<library path="lib/libkimm_husky_gui">
+  <class name="kimm_husky_gui/HuskyGui" type="kimm_husky_gui::HuskyGui" base_class_type="rqt_gui_cpp::Plugin">
+    <description>
+      An example Python GUI plugin to create a great user interface.
+    </description>
+    <qtgui>
+      <!-- optional grouping...
+      <group>
+        <label>Group</label>
+      </group>
+      <group>
+        <label>Subgroup</label>
+      </group>
+      -->
+      <label>Kimm Husky Gui</label>
+      <statustip>Great user interface to provide real value.</statustip>
+    </qtgui>
+  </class>
+</library>
