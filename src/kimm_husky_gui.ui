@@ -72,7 +72,7 @@ color: rgb(238, 238, 236);</string>
     <enum>QFrame::StyledPanel</enum>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>2</number>
    </property>
    <widget class="QWidget" name="CUSTOM">
     <widget class="QLabel" name="label_33">
@@ -335,7 +335,7 @@ color: rgb(238, 238, 236);</string>
        <x>30</x>
        <y>50</y>
        <width>351</width>
-       <height>351</height>
+       <height>361</height>
       </rect>
      </property>
      <property name="frameShape">
@@ -347,7 +347,7 @@ color: rgb(238, 238, 236);</string>
      <widget class="QLabel" name="label_85">
       <property name="geometry">
        <rect>
-        <x>139</x>
+        <x>19</x>
         <y>0</y>
         <width>91</width>
         <height>20</height>
@@ -366,7 +366,7 @@ color: rgb(238, 238, 236);</string>
      <widget class="QLabel" name="label_97">
       <property name="geometry">
        <rect>
-        <x>30</x>
+        <x>10</x>
         <y>20</y>
         <width>57</width>
         <height>29</height>
@@ -382,7 +382,7 @@ color: rgb(238, 238, 236);</string>
      <widget class="QLabel" name="label_100">
       <property name="geometry">
        <rect>
-        <x>160</x>
+        <x>140</x>
         <y>20</y>
         <width>57</width>
         <height>29</height>
@@ -398,9 +398,9 @@ color: rgb(238, 238, 236);</string>
      <widget class="QWidget" name="horizontalLayoutWidget_8">
       <property name="geometry">
        <rect>
-        <x>30</x>
+        <x>10</x>
         <y>50</y>
-        <width>313</width>
+        <width>336</width>
         <height>281</height>
        </rect>
       </property>
@@ -641,51 +641,107 @@ color: rgb(238, 238, 236);</string>
        <item>
         <layout class="QVBoxLayout" name="verticalLayout_30">
          <item>
-          <widget class="QLineEdit" name="joint_kv1_2">
+          <widget class="QCheckBox" name="joint_m1">
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+            </font>
+           </property>
            <property name="text">
-            <string>1</string>
+            <string>Enable</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="joint_kv2_2">
+          <widget class="QCheckBox" name="joint_m2">
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+            </font>
+           </property>
            <property name="text">
-            <string>1</string>
+            <string>Enable</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="joint_kv3_2">
+          <widget class="QCheckBox" name="joint_m3">
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+            </font>
+           </property>
            <property name="text">
-            <string>1</string>
+            <string>Enable</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="joint_kv4_2">
+          <widget class="QCheckBox" name="joint_m4">
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+            </font>
+           </property>
            <property name="text">
-            <string>1</string>
+            <string>Enable</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="joint_kv5_2">
+          <widget class="QCheckBox" name="joint_m5">
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+            </font>
+           </property>
            <property name="text">
-            <string>1</string>
+            <string>Enable</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="joint_kv6_2">
+          <widget class="QCheckBox" name="joint_m6">
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+            </font>
+           </property>
            <property name="text">
-            <string>1</string>
+            <string>Enable</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="joint_kv7_2">
+          <widget class="QCheckBox" name="joint_m7">
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+            </font>
+           </property>
            <property name="text">
-            <string>1</string>
+            <string>Enable</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
            </property>
           </widget>
          </item>
@@ -696,14 +752,14 @@ color: rgb(238, 238, 236);</string>
      <widget class="QLabel" name="label_99">
       <property name="geometry">
        <rect>
-        <x>97</x>
+        <x>60</x>
         <y>20</y>
-        <width>57</width>
+        <width>91</width>
         <height>29</height>
        </rect>
       </property>
       <property name="text">
-       <string>Target</string>
+       <string>Target(Deg)</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -712,7 +768,7 @@ color: rgb(238, 238, 236);</string>
      <widget class="QLabel" name="label_101">
       <property name="geometry">
        <rect>
-        <x>220</x>
+        <x>205</x>
         <y>20</y>
         <width>57</width>
         <height>29</height>
@@ -739,6 +795,93 @@ color: rgb(238, 238, 236);</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_6">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>280</y>
+        <width>14</width>
+        <height>15</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_8">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>310</y>
+        <width>14</width>
+        <height>15</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="c_joint">
+      <property name="geometry">
+       <rect>
+        <x>16</x>
+        <y>337</y>
+        <width>151</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(204, 0, 0);
+color: rgb(238, 238, 236);</string>
+      </property>
+      <property name="text">
+       <string>Current Posture</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="ideal_kv">
+      <property name="geometry">
+       <rect>
+        <x>182</x>
+        <y>337</y>
+        <width>161</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Ideal Kv gains</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
       </property>
      </widget>
     </widget>
@@ -792,7 +935,7 @@ color: rgb(238, 238, 236);</string>
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
-     <widget class="QLineEdit" name="joint_trajectory_ctime">
+     <widget class="QLineEdit" name="joint_trajectory_duration">
       <property name="geometry">
        <rect>
         <x>277</x>
@@ -839,6 +982,9 @@ color: rgb(238, 238, 236);</string>
       <property name="styleSheet">
        <string notr="true">background-color: rgb(204, 0, 0);
 color: rgb(238, 238, 236);</string>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
       </property>
       <item>
        <property name="text">
@@ -1002,6 +1148,25 @@ color: rgb(238, 238, 236);</string>
        <string>Run</string>
       </property>
      </widget>
+     <widget class="QPushButton" name="waypoint_clear_btn">
+      <property name="geometry">
+       <rect>
+        <x>278</x>
+        <y>225</y>
+        <width>161</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Clear Waypoints</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QPlainTextEdit" name="joint_trajectory_log">
      <property name="geometry">
@@ -1025,259 +1190,33 @@ color: rgb(238, 238, 236);</string>
     </widget>
    </widget>
    <widget class="QWidget" name="TASK">
-    <widget class="QFrame" name="frame_2">
+    <widget class="QPlainTextEdit" name="se3_trajectory_log">
      <property name="geometry">
       <rect>
-       <x>650</x>
-       <y>20</y>
-       <width>181</width>
-       <height>501</height>
+       <x>30</x>
+       <y>410</y>
+       <width>811</width>
+       <height>491</height>
       </rect>
      </property>
-     <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+     <property name="readOnly">
+      <bool>true</bool>
      </property>
-     <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+     <property name="plainText">
+      <string>-- SE3 Trajectory Log --
+</string>
      </property>
-     <widget class="QWidget" name="verticalLayoutWidget_16">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>230</y>
-        <width>141</width>
-        <height>161</height>
-       </rect>
-      </property>
-      <property name="windowTitle">
-       <string>Dyros Red UI</string>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout_3">
-       <item>
-        <widget class="QPushButton" name="gravity_button_4">
-         <property name="toolTip">
-          <string>disable task control, enable gravity compensation</string>
-         </property>
-         <property name="text">
-          <string>GravityControl</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="task_button_4">
-         <property name="toolTip">
-          <string>position control with current joint pos.</string>
-         </property>
-         <property name="text">
-          <string>PositionControl</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="task_button_6">
-         <property name="toolTip">
-          <string>position control with current joint pos.</string>
-         </property>
-         <property name="text">
-          <string>Position+DOB</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="task_button_5">
-         <property name="toolTip">
-          <string>position control + gravity compensation</string>
-         </property>
-         <property name="text">
-          <string>Position(Grav)</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="torqueredis">
-         <property name="toolTip">
-          <string>Contact Redistribution Mode Select</string>
-         </property>
-         <property name="text">
-          <string>torqueredis</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="verticalLayoutWidget_44">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>410</y>
-        <width>141</width>
-        <height>95</height>
-       </rect>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout_38">
-       <item>
-        <widget class="QPushButton" name="helpbutton_4">
-         <property name="text">
-          <string>help</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="printdatabutton">
-         <property name="toolTip">
-          <string>print data to dc.data_out. See codes for detail</string>
-         </property>
-         <property name="text">
-          <string>Print Data</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="data_button_4">
-         <property name="toolTip">
-          <string>dc.tocabi_.showdata = true for data printing.</string>
-         </property>
-         <property name="text">
-          <string>Show Data</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="verticalLayoutWidget_45">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>20</y>
-        <width>141</width>
-        <height>194</height>
-       </rect>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout_39">
-       <item>
-        <widget class="QPushButton" name="iybtn">
-         <property name="toolTip">
-          <string>Initialize Current Yaw to Zero</string>
-         </property>
-         <property name="statusTip">
-          <string>statustip</string>
-         </property>
-         <property name="whatsThis">
-          <string>whatsThis</string>
-         </property>
-         <property name="text">
-          <string extracomment="what is comment">Init Yaw</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="qdot_lpf">
-         <property name="toolTip">
-          <string>joint velocity low pass filter on/off</string>
-         </property>
-         <property name="text">
-          <string>qdot Lpf</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="sebutton">
-         <property name="toolTip">
-          <string>state estimation on/off</string>
-         </property>
-         <property name="text">
-          <string>State Estimation</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="sebyftbtn">
-         <property name="toolTip">
-          <string>use mujoco's virtual joint value</string>
-         </property>
-         <property name="text">
-          <string>SE by FT</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="vjbtn">
-         <property name="toolTip">
-          <string>use mujoco's virtual joint value</string>
-         </property>
-         <property name="text">
-          <string>virtual joint(sim)</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="IgIMUbtn">
-         <property name="toolTip">
-          <string>use mujoco's virtual joint value</string>
-         </property>
-         <property name="text">
-          <string>Ignore IMU</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QLabel" name="label_138">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>0</y>
-        <width>141</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Global Position</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_139">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>210</y>
-        <width>141</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Robot Control</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_140">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>390</y>
-        <width>139</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Data</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
+     <property name="overwriteMode">
+      <bool>false</bool>
+     </property>
     </widget>
-    <widget class="QFrame" name="frame_13">
+    <widget class="QFrame" name="frame_8">
      <property name="geometry">
       <rect>
-       <x>10</x>
-       <y>20</y>
-       <width>631</width>
-       <height>501</height>
+       <x>30</x>
+       <y>40</y>
+       <width>351</width>
+       <height>361</height>
       </rect>
      </property>
      <property name="frameShape">
@@ -1286,364 +1225,707 @@ color: rgb(238, 238, 236);</string>
      <property name="frameShadow">
       <enum>QFrame::Raised</enum>
      </property>
-     <widget class="QLabel" name="label_56">
+     <widget class="QLabel" name="label_86">
       <property name="geometry">
        <rect>
-        <x>110</x>
-        <y>10</y>
-        <width>81</width>
+        <x>19</x>
+        <y>0</y>
+        <width>91</width>
         <height>20</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="text">
-       <string>Arm mover</string>
+       <string>SE3 Target</string>
       </property>
      </widget>
-     <widget class="QWidget" name="horizontalLayoutWidget_2">
+     <widget class="QLabel" name="label_102">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>20</y>
+        <width>57</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Name</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_103">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>20</y>
+        <width>57</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Kp</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QWidget" name="horizontalLayoutWidget_11">
       <property name="geometry">
        <rect>
         <x>10</x>
         <y>50</y>
-        <width>251</width>
-        <height>281</height>
+        <width>336</width>
+        <height>184</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <layout class="QHBoxLayout" name="horizontalLayout_17">
        <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_6">
+        <layout class="QVBoxLayout" name="verticalLayout_28">
          <item>
-          <layout class="QVBoxLayout" name="verticalLayout_18">
-           <item>
-            <widget class="QLabel" name="l_arm_x">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>40</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>x</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="l_arm_y">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>40</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>y</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="l_arm_z">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>40</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>z</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="l_arm_roll">
-             <property name="text">
-              <string>roll</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="l_arm_pitch">
-             <property name="text">
-              <string>pitch</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="l_arm_yaw">
-             <property name="text">
-              <string>yaw</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-          </layout>
+          <widget class="QLabel" name="label_104">
+           <property name="text">
+            <string>X</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
          </item>
          <item>
-          <layout class="QVBoxLayout" name="verticalLayout_17">
-           <item>
-            <widget class="QLineEdit" name="text_l_x">
-             <property name="text">
-              <string>0.0</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLineEdit" name="text_l_y">
-             <property name="text">
-              <string>0.0</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLineEdit" name="text_l_z">
-             <property name="text">
-              <string>0.0</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLineEdit" name="text_l_roll">
-             <property name="text">
-              <string>0.0</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLineEdit" name="text_l_pitch">
-             <property name="text">
-              <string>0.0</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLineEdit" name="text_l_yaw">
-             <property name="text">
-              <string>0.0</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
+          <widget class="QLabel" name="label_106">
+           <property name="text">
+            <string>Y</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_107">
+           <property name="text">
+            <string>Z</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_108">
+           <property name="text">
+            <string>Roll</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_109">
+           <property name="text">
+            <string>Pitch</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_110">
+           <property name="text">
+            <string>Yaw</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
        <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_7">
+        <layout class="QVBoxLayout" name="verticalLayout_23">
          <item>
-          <layout class="QVBoxLayout" name="verticalLayout_23">
-           <item>
-            <widget class="QLabel" name="label_62">
-             <property name="text">
-              <string>x</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="label_61">
-             <property name="text">
-              <string>y</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="label_60">
-             <property name="text">
-              <string>z</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="label_59">
-             <property name="text">
-              <string>roll</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="label_58">
-             <property name="text">
-              <string>pitch</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLabel" name="label_57">
-             <property name="text">
-              <string>yaw</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignCenter</set>
-             </property>
-            </widget>
-           </item>
-          </layout>
+          <widget class="QLineEdit" name="se3_x">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
          </item>
          <item>
-          <layout class="QVBoxLayout" name="verticalLayout_19">
-           <item>
-            <widget class="QLineEdit" name="text_r_x">
-             <property name="text">
-              <string>0.0</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLineEdit" name="text_r_y">
-             <property name="text">
-              <string>0.0</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLineEdit" name="text_r_z">
-             <property name="text">
-              <string>0.0</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLineEdit" name="text_r_roll">
-             <property name="text">
-              <string>0.0</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLineEdit" name="text_r_pitch">
-             <property name="text">
-              <string>0.0</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QLineEdit" name="text_r_yaw">
-             <property name="text">
-              <string>0.0</string>
-             </property>
-            </widget>
-           </item>
-          </layout>
+          <widget class="QLineEdit" name="se3_y">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="se3_z">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="se3_roll">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="se3_pitch">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="se3_yaw">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_24">
+         <item>
+          <widget class="QLineEdit" name="se3_kp1">
+           <property name="text">
+            <string>400.0</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="se3_kp2">
+           <property name="text">
+            <string>400.0</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="se3_kp3">
+           <property name="text">
+            <string>400.0</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="se3_kp4">
+           <property name="text">
+            <string>400.0</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="se3_kp5">
+           <property name="text">
+            <string>400.0</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="se3_kp6">
+           <property name="text">
+            <string>400.0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_25">
+         <item>
+          <widget class="QLineEdit" name="se3_kv1">
+           <property name="text">
+            <string>40.0</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="se3_kv2">
+           <property name="text">
+            <string>40.0</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="se3_kv3">
+           <property name="text">
+            <string>40.0</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="se3_kv4">
+           <property name="text">
+            <string>40.0</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="se3_kv5">
+           <property name="text">
+            <string>40.0</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="se3_kv6">
+           <property name="text">
+            <string>40.0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_31">
+         <item>
+          <widget class="QCheckBox" name="se3_m1">
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Enable</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="se3_m2">
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Enable</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="se3_m3">
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Enable</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="se3_m4">
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Enable</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="se3_m5">
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Enable</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="se3_m6">
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Enable</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
       </layout>
      </widget>
-     <widget class="QLabel" name="label_63">
+     <widget class="QLabel" name="label_112">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>20</y>
+        <width>91</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Target(Deg)</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_113">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>20</y>
+        <width>57</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Kv</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_123">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>20</y>
+        <width>57</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Mask</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_7">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>280</y>
+        <width>14</width>
+        <height>15</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="checkBox_9">
+      <property name="geometry">
+       <rect>
+        <x>350</x>
+        <y>310</y>
+        <width>14</width>
+        <height>15</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="c_joint_2">
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>30</y>
-        <width>121</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Left Arm</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_82">
-      <property name="geometry">
-       <rect>
-        <x>140</x>
-        <y>30</y>
-        <width>121</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Right Arm</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_80">
-      <property name="geometry">
-       <rect>
-        <x>380</x>
-        <y>380</y>
-        <width>71</width>
+        <y>241</y>
+        <width>151</width>
         <height>21</height>
        </rect>
       </property>
-      <property name="text">
-       <string>Traj Time</string>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
       </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(204, 0, 0);
+color: rgb(238, 238, 236);</string>
+      </property>
+      <property name="text">
+       <string>Current Posture</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_84">
+     <widget class="QCheckBox" name="ideal_kv_2">
       <property name="geometry">
        <rect>
-        <x>400</x>
-        <y>420</y>
-        <width>51</width>
+        <x>180</x>
+        <y>242</y>
+        <width>161</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Ideal Kv gains</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="wholebody_check">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>271</y>
+        <width>161</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Whole-body</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="use_rel">
+      <property name="geometry">
+       <rect>
+        <x>181</x>
+        <y>271</y>
+        <width>161</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Relative Frame</string>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QLabel" name="label_45">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>221</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="text">
+      <string>SE3 Control</string>
+     </property>
+    </widget>
+    <widget class="QFrame" name="frame_9">
+     <property name="geometry">
+      <rect>
+       <x>390</x>
+       <y>40</y>
+       <width>451</width>
+       <height>351</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLabel" name="label_125">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>0</y>
+        <width>161</width>
         <height>20</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="text">
-       <string>Mode</string>
+       <string>Trajectory Type</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_126">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>74</y>
+        <width>201</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Time (Only for Cubic spline) </string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
-     <widget class="QLineEdit" name="text_traj_time">
+     <widget class="QLineEdit" name="se3_trajectory_duration">
       <property name="geometry">
        <rect>
-        <x>460</x>
-        <y>370</y>
+        <x>277</x>
+        <y>72</y>
+        <width>161</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>3.0</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="se3_trajectory_mode">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>40</y>
+        <width>187</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>187</width>
+        <height>27</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(204, 0, 0);
+color: rgb(238, 238, 236);</string>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <item>
+       <property name="text">
+        <string>0. Constant </string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>1. Cubic Spline</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>2. Time Optimization</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_127">
+      <property name="geometry">
+       <rect>
+        <x>-1</x>
+        <y>113</y>
+        <width>271</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>SE3 Max Vel (Only for TimeOpt)</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="se3_trajectory_tvel">
+      <property name="geometry">
+       <rect>
+        <x>278</x>
+        <y>112</y>
         <width>161</width>
         <height>31</height>
        </rect>
@@ -1655,727 +1937,149 @@ color: rgb(238, 238, 236);</string>
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
-     <widget class="QPushButton" name="task_send_button">
+     <widget class="QLabel" name="label_128">
       <property name="geometry">
        <rect>
-        <x>460</x>
-        <y>450</y>
-        <width>161</width>
-        <height>41</height>
+        <x>-1</x>
+        <y>152</y>
+        <width>271</width>
+        <height>29</height>
        </rect>
       </property>
       <property name="text">
-       <string>SEND</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_81">
-      <property name="geometry">
-       <rect>
-        <x>310</x>
-        <y>20</y>
-        <width>91</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>COM Mover</string>
-      </property>
-     </widget>
-     <widget class="QWidget" name="horizontalLayoutWidget_3">
-      <property name="geometry">
-       <rect>
-        <x>280</x>
-        <y>50</y>
-        <width>160</width>
-        <height>281</height>
-       </rect>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_5">
-       <item>
-        <layout class="QVBoxLayout" name="verticalLayout_26">
-         <item>
-          <widget class="QLabel" name="label_83">
-           <property name="text">
-            <string>COM Pos</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_86">
-           <property name="text">
-            <string>Height</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_104">
-           <property name="text">
-            <string>pelv pitch</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_87">
-           <property name="text">
-            <string>roll</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_90">
-           <property name="text">
-            <string>pitch</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="label_89">
-           <property name="text">
-            <string>yaw</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <layout class="QVBoxLayout" name="verticalLayout_16">
-         <item>
-          <widget class="QLineEdit" name="com_pos">
-           <property name="text">
-            <string>0.5</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLineEdit" name="com_height">
-           <property name="text">
-            <string>0.85</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLineEdit" name="pelv_pitch">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLineEdit" name="com_roll">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLineEdit" name="com_pitch">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLineEdit" name="com_yaw">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QComboBox" name="task_mode">
-      <property name="geometry">
-       <rect>
-        <x>460</x>
-        <y>412</y>
-        <width>161</width>
-        <height>27</height>
-       </rect>
-      </property>
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>187</width>
-        <height>27</height>
-       </size>
-      </property>
-      <item>
-       <property name="text">
-        <string>0. COM pos</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>1. COM pos + rot</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>2. COM ,Upper</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>3. Pelv,Upper</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>4. left single</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>5. right single</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>6. --</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>7. multi contact</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>8. --</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>9. --</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>10. CustomController 1</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>11. CustomController 2</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>12. CustomController 3</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>13. CustomController 4</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>14. CustomController 5</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QLabel" name="label_88">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>360</y>
-        <width>81</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>deg</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="customtaskgain">
-      <property name="geometry">
-       <rect>
-        <x>470</x>
-        <y>20</y>
-        <width>141</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Custom Task gain</string>
-      </property>
-     </widget>
-     <widget class="QFrame" name="taskgain">
-      <property name="enabled">
-       <bool>true</bool>
-      </property>
-      <property name="geometry">
-       <rect>
-        <x>460</x>
-        <y>40</y>
-        <width>161</width>
-        <height>181</height>
-       </rect>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::NoFrame</enum>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Raised</enum>
-      </property>
-      <widget class="QWidget" name="horizontalLayoutWidget">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>10</y>
-         <width>151</width>
-         <height>163</height>
-        </rect>
-       </property>
-       <layout class="QHBoxLayout" name="horizontalLayout">
-        <item>
-         <layout class="QVBoxLayout" name="verticalLayout">
-          <item>
-           <widget class="QLabel" name="label_4">
-            <property name="text">
-             <string>pos p</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLabel" name="label_5">
-            <property name="text">
-             <string>    pos d   </string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLabel" name="label_6">
-            <property name="text">
-             <string>ang p</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLabel" name="label_12">
-            <property name="text">
-             <string>ang d</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLabel" name="label_135">
-            <property name="text">
-             <string>acc p</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
-        <item>
-         <layout class="QVBoxLayout" name="verticalLayout_4">
-          <item>
-           <widget class="QLineEdit" name="pospgain"/>
-          </item>
-          <item>
-           <widget class="QLineEdit" name="posdgain"/>
-          </item>
-          <item>
-           <widget class="QLineEdit" name="angpgain"/>
-          </item>
-          <item>
-           <widget class="QLineEdit" name="angdgain"/>
-          </item>
-          <item>
-           <widget class="QLineEdit" name="accgain"/>
-          </item>
-         </layout>
-        </item>
-       </layout>
-      </widget>
-     </widget>
-     <widget class="QPushButton" name="que_add">
-      <property name="geometry">
-       <rect>
-        <x>240</x>
-        <y>460</y>
-        <width>81</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Add Que</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="text_que">
-      <property name="geometry">
-       <rect>
-        <x>80</x>
-        <y>460</y>
-        <width>161</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
+       <string>SE3 Max Acc (Only for TimeOpt)</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
-     <widget class="QLabel" name="label_103">
+     <widget class="QLineEdit" name="se3_trajectory_tacc">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>460</y>
-        <width>71</width>
+        <x>278</x>
+        <y>150</y>
+        <width>161</width>
         <height>31</height>
        </rect>
       </property>
       <property name="text">
-       <string>que name</string>
+       <string>1.0</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
-     <widget class="QComboBox" name="solver_mode">
+     <widget class="QPushButton" name="waypoint_add_btn_2">
       <property name="geometry">
        <rect>
-        <x>460</x>
-        <y>240</y>
-        <width>151</width>
-        <height>27</height>
+        <x>278</x>
+        <y>190</y>
+        <width>161</width>
+        <height>31</height>
        </rect>
       </property>
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
       </property>
-      <property name="maximumSize">
-       <size>
-        <width>187</width>
-        <height>27</height>
-       </size>
+      <property name="text">
+       <string>Add Waypoint</string>
       </property>
-      <item>
-       <property name="text">
-        <string>Original</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>QP1</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>QP2</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>QP2_junhee</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>QP3</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QComboBox" name="cr_mode">
-      <property name="geometry">
-       <rect>
-        <x>460</x>
-        <y>300</y>
-        <width>151</width>
-        <height>27</height>
-       </rect>
-      </property>
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>187</width>
-        <height>27</height>
-       </size>
-      </property>
-      <item>
-       <property name="text">
-        <string>Yslee</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>QP</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Off</string>
-       </property>
-      </item>
      </widget>
      <widget class="QLabel" name="label_133">
       <property name="geometry">
        <rect>
-        <x>460</x>
-        <y>220</y>
-        <width>91</width>
-        <height>17</height>
+        <x>4</x>
+        <y>191</y>
+        <width>271</width>
+        <height>29</height>
        </rect>
       </property>
       <property name="text">
-       <string>torque solver</string>
+       <string>Add Waypoint (Only for TimeOpt)</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
-     <widget class="QLabel" name="label_134">
+     <widget class="QPushButton" name="se3_trajectory_send_1">
       <property name="geometry">
        <rect>
-        <x>460</x>
+        <x>20</x>
         <y>280</y>
-        <width>151</width>
-        <height>17</height>
+        <width>161</width>
+        <height>41</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(204, 0, 0);
+color: rgb(238, 238, 236);</string>
       </property>
       <property name="text">
-       <string>Contact redistrbution</string>
+       <string>Set Configuration</string>
       </property>
      </widget>
-     <widget class="QSlider" name="horizontalSlider">
+     <widget class="QPushButton" name="se3_trajectory_send_2">
       <property name="geometry">
        <rect>
-        <x>100</x>
-        <y>380</y>
-        <width>271</width>
-        <height>20</height>
+        <x>280</x>
+        <y>280</y>
+        <width>161</width>
+        <height>41</height>
        </rect>
       </property>
-      <property name="value">
-       <number>50</number>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
       </property>
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-     </widget>
-     <widget class="QSlider" name="horizontalSlider_2">
-      <property name="geometry">
-       <rect>
-        <x>100</x>
-        <y>400</y>
-        <width>271</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="value">
-       <number>50</number>
-      </property>
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-     </widget>
-     <widget class="QSlider" name="horizontalSlider_3">
-      <property name="geometry">
-       <rect>
-        <x>100</x>
-        <y>420</y>
-        <width>271</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="value">
-       <number>50</number>
-      </property>
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-     </widget>
-     <widget class="QComboBox" name="comboBox">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>390</y>
-        <width>81</width>
-        <height>25</height>
-       </rect>
-      </property>
-      <item>
-       <property name="text">
-        <string>COM pos</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Pelv Rot</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>UpperBody rotation</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>RightHand pos</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>RightHand rot</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>LeftHand pos</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>LeftHand rot</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QSlider" name="horizontalSlider_4">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>420</y>
-        <width>81</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="minimum">
-       <number>1</number>
-      </property>
-      <property name="maximum">
-       <number>20</number>
-      </property>
-      <property name="value">
-       <number>1</number>
-      </property>
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox">
-      <property name="geometry">
-       <rect>
-        <x>460</x>
-        <y>330</y>
-        <width>141</width>
-        <height>23</height>
-       </rect>
+      <property name="styleSheet">
+       <string notr="true"/>
       </property>
       <property name="text">
-       <string>Maintain LC</string>
+       <string>Run</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="cb_lf">
+     <widget class="QPushButton" name="waypoint_clear_btn_2">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>330</y>
-        <width>92</width>
-        <height>23</height>
+        <x>278</x>
+        <y>225</y>
+        <width>161</width>
+        <height>31</height>
        </rect>
       </property>
-      <property name="text">
-       <string>l foot</string>
-      </property>
-      <property name="checked">
-       <bool>true</bool>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="cb_rf">
-      <property name="geometry">
-       <rect>
-        <x>110</x>
-        <y>330</y>
-        <width>92</width>
-        <height>23</height>
-       </rect>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
       </property>
       <property name="text">
-       <string>r foot</string>
-      </property>
-      <property name="checked">
-       <bool>true</bool>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="cb_lh">
-      <property name="geometry">
-       <rect>
-        <x>210</x>
-        <y>330</y>
-        <width>92</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>l hand</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="cb_rh">
-      <property name="geometry">
-       <rect>
-        <x>300</x>
-        <y>330</y>
-        <width>92</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>r hand</string>
+       <string>Clear Waypoints</string>
       </property>
      </widget>
     </widget>
-    <widget class="QFrame" name="frame_14">
+   </widget>
+   <widget class="QWidget" name="BASE">
+    <widget class="QFrame" name="frame_7">
      <property name="geometry">
       <rect>
-       <x>10</x>
-       <y>530</y>
-       <width>821</width>
-       <height>201</height>
+       <x>600</x>
+       <y>50</y>
+       <width>241</width>
+       <height>361</height>
       </rect>
      </property>
      <property name="frameShape">
@@ -2384,1167 +2088,36 @@ color: rgb(238, 238, 236);</string>
      <property name="frameShadow">
       <enum>QFrame::Raised</enum>
      </property>
-     <widget class="QCheckBox" name="checkBox_dob">
+     <widget class="QLabel" name="label_124">
       <property name="geometry">
        <rect>
-        <x>440</x>
+        <x>12</x>
         <y>0</y>
-        <width>51</width>
+        <width>161</width>
         <height>20</height>
        </rect>
       </property>
-      <property name="text">
-       <string>DOB</string>
-      </property>
-     </widget>
-     <widget class="QComboBox" name="walking_pattern">
-      <property name="geometry">
-       <rect>
-        <x>440</x>
-        <y>50</y>
-        <width>121</width>
-        <height>28</height>
-       </rect>
-      </property>
-      <item>
-       <property name="text">
-        <string>DCM</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Previewcontrol</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>MPC</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QComboBox" name="step_mode">
-      <property name="geometry">
-       <rect>
-        <x>440</x>
-        <y>170</y>
-        <width>121</width>
-        <height>28</height>
-       </rect>
-      </property>
-      <item>
-       <property name="text">
-        <string>Right</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Left</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QComboBox" name="ik_mode">
-      <property name="geometry">
-       <rect>
-        <x>440</x>
-        <y>110</y>
-        <width>121</width>
-        <height>28</height>
-       </rect>
-      </property>
-      <item>
-       <property name="text">
-        <string>IK</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>COMJacobian</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Torque</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QLabel" name="walking_x">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>20</y>
-        <width>98</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>40</width>
-        <height>0</height>
-       </size>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
       </property>
       <property name="text">
-       <string>x</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
+       <string>Simple Planner</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_88_">
+     <widget class="QLineEdit" name="backward_meter">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>0</y>
-        <width>131</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Walking Control</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="walking_y">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>50</y>
-        <width>98</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>40</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="text">
-       <string>y</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="text_walking_x">
-      <property name="geometry">
-       <rect>
-        <x>100</x>
-        <y>20</y>
-        <width>88</width>
-        <height>25</height>
+        <x>40</x>
+        <y>190</y>
+        <width>71</width>
+        <height>31</height>
        </rect>
       </property>
       <property name="text">
        <string>0.5</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="text_walking_y">
-      <property name="geometry">
-       <rect>
-        <x>100</x>
-        <y>50</y>
-        <width>88</width>
-        <height>25</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>0.0</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="walking_z">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>80</y>
-        <width>98</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>40</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="text">
-       <string>z</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="text_walking_z">
-      <property name="geometry">
-       <rect>
-        <x>100</x>
-        <y>80</y>
-        <width>88</width>
-        <height>25</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>0.0</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="walking_height">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>113</y>
-        <width>100</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>height</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="text_walking_height">
-      <property name="geometry">
-       <rect>
-        <x>100</x>
-        <y>110</y>
-        <width>88</width>
-        <height>25</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>0.0</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="walking_theta">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>135</y>
-        <width>98</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>theta</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="text_walking_theta">
-      <property name="geometry">
-       <rect>
-        <x>100</x>
-        <y>140</y>
-        <width>88</width>
-        <height>25</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>0.0</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="walking_steplengthx">
-      <property name="geometry">
-       <rect>
-        <x>210</x>
-        <y>-60</y>
-        <width>98</width>
-        <height>184</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>step_length_x</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="text_walking_steplengthx">
-      <property name="geometry">
-       <rect>
-        <x>320</x>
-        <y>20</y>
-        <width>88</width>
-        <height>25</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>0.1</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="walking_steplengthy">
-      <property name="geometry">
-       <rect>
-        <x>210</x>
-        <y>-115</y>
-        <width>98</width>
-        <height>374</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>step_length_y</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="text_walking_steplengthy">
-      <property name="geometry">
-       <rect>
-        <x>320</x>
-        <y>60</y>
-        <width>88</width>
-        <height>25</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>0.0</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="walkinginit_btn">
-      <property name="geometry">
-       <rect>
-        <x>600</x>
-        <y>10</y>
-        <width>181</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>walking init</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="walkingstart_btn">
-      <property name="geometry">
-       <rect>
-        <x>600</x>
-        <y>60</y>
-        <width>181</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>walking start</string>
-      </property>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_IMU">
-      <property name="geometry">
-       <rect>
-        <x>500</x>
-        <y>0</y>
-        <width>51</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>IMU</string>
-      </property>
-     </widget>
-     <widget class="QComboBox" name="walking_pattern_2">
-      <property name="geometry">
-       <rect>
-        <x>440</x>
-        <y>80</y>
-        <width>121</width>
-        <height>28</height>
-       </rect>
-      </property>
-      <item>
-       <property name="text">
-        <string>PELVIS</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>COM</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QCheckBox" name="checkBox_mom">
-      <property name="geometry">
-       <rect>
-        <x>440</x>
-        <y>30</y>
-        <width>61</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>mom</string>
-      </property>
-     </widget>
-     <widget class="QComboBox" name="controlmode">
-      <property name="geometry">
-       <rect>
-        <x>440</x>
-        <y>140</y>
-        <width>121</width>
-        <height>28</height>
-       </rect>
-      </property>
-      <item>
-       <property name="text">
-        <string>None</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>COM Damping</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>PELV_CLIK</string>
-       </property>
-      </item>
-     </widget>
-    </widget>
-    <widget class="QPushButton" name="que_send">
-     <property name="geometry">
-      <rect>
-       <x>350</x>
-       <y>870</y>
-       <width>111</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Send</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="que_reset">
-     <property name="geometry">
-      <rect>
-       <x>350</x>
-       <y>830</y>
-       <width>111</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>reset</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="que_delete">
-     <property name="geometry">
-      <rect>
-       <x>350</x>
-       <y>790</y>
-       <width>111</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>delete</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="que_up">
-     <property name="enabled">
-      <bool>false</bool>
-     </property>
-     <property name="geometry">
-      <rect>
-       <x>350</x>
-       <y>750</y>
-       <width>51</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>△</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="que_down">
-     <property name="enabled">
-      <bool>false</bool>
-     </property>
-     <property name="geometry">
-      <rect>
-       <x>410</x>
-       <y>750</y>
-       <width>51</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>▽</string>
-     </property>
-    </widget>
-    <widget class="QListWidget" name="que_listwidget">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>740</y>
-       <width>331</width>
-       <height>171</height>
-      </rect>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_153">
-     <property name="geometry">
-      <rect>
-       <x>500</x>
-       <y>740</y>
-       <width>311</width>
-       <height>161</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>18</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>--Emergency Shortcut--
-F1 : EMERGENCY Off (E0)
-F2 : EMERGENCY HOLD(E1)
-F3 : HARD DAMPING(E2)</string>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QWidget" name="BASE">
-    <widget class="QLabel" name="label_39">
-     <property name="geometry">
-      <rect>
-       <x>40</x>
-       <y>30</y>
-       <width>101</width>
-       <height>17</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>ecat tune page</string>
-     </property>
-    </widget>
-    <widget class="QFrame" name="frame_11">
-     <property name="geometry">
-      <rect>
-       <x>400</x>
-       <y>20</y>
-       <width>431</width>
-       <height>491</height>
-      </rect>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
-     </property>
-     <widget class="QLabel" name="label_40">
-      <property name="geometry">
-       <rect>
-        <x>310</x>
-        <y>50</y>
-        <width>67</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>left</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_41">
-      <property name="geometry">
-       <rect>
-        <x>50</x>
-        <y>50</y>
-        <width>67</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>right</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-     <widget class="QWidget" name="verticalLayoutWidget_20">
-      <property name="geometry">
-       <rect>
-        <x>310</x>
-        <y>80</y>
-        <width>72</width>
-        <height>221</height>
-       </rect>
-      </property>
-      <layout class="QVBoxLayout" name="leftarm_layout_2"/>
-     </widget>
-     <widget class="QWidget" name="verticalLayoutWidget_21">
-      <property name="geometry">
-       <rect>
-        <x>50</x>
-        <y>80</y>
-        <width>71</width>
-        <height>221</height>
-       </rect>
-      </property>
-      <layout class="QVBoxLayout" name="rightarm_layout_2"/>
-     </widget>
-     <widget class="QWidget" name="verticalLayoutWidget_22">
-      <property name="geometry">
-       <rect>
-        <x>230</x>
-        <y>310</y>
-        <width>71</width>
-        <height>161</height>
-       </rect>
-      </property>
-      <layout class="QVBoxLayout" name="leftleg_layout_2"/>
-     </widget>
-     <widget class="QWidget" name="verticalLayoutWidget_23">
-      <property name="geometry">
-       <rect>
-        <x>130</x>
-        <y>310</y>
-        <width>71</width>
-        <height>161</height>
-       </rect>
-      </property>
-      <layout class="QVBoxLayout" name="rightleg_layout_2"/>
-     </widget>
-     <widget class="QWidget" name="verticalLayoutWidget_24">
-      <property name="geometry">
-       <rect>
-        <x>180</x>
-        <y>50</y>
-        <width>71</width>
-        <height>51</height>
-       </rect>
-      </property>
-      <layout class="QVBoxLayout" name="head_layout_2"/>
-     </widget>
-     <widget class="QWidget" name="verticalLayoutWidget_25">
-      <property name="geometry">
-       <rect>
-        <x>180</x>
-        <y>140</y>
-        <width>71</width>
-        <height>81</height>
-       </rect>
-      </property>
-      <layout class="QVBoxLayout" name="waist_layout_2"/>
-     </widget>
-    </widget>
-    <widget class="QPushButton" name="resettunebtn">
-     <property name="geometry">
-      <rect>
-       <x>190</x>
-       <y>80</y>
-       <width>161</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Reset Tune Constant</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="sendtunebtn">
-     <property name="geometry">
-      <rect>
-       <x>190</x>
-       <y>20</y>
-       <width>161</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Send Tune Constant</string>
-     </property>
-    </widget>
-    <widget class="QFrame" name="frame">
-     <property name="geometry">
-      <rect>
-       <x>400</x>
-       <y>520</y>
-       <width>431</width>
-       <height>381</height>
-      </rect>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
-     </property>
-     <widget class="QWidget" name="verticalLayoutWidget_52">
-      <property name="geometry">
-       <rect>
-        <x>230</x>
-        <y>70</y>
-        <width>71</width>
-        <height>194</height>
-       </rect>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout_40">
-       <item>
-        <widget class="QLineEdit" name="gainx">
-         <property name="text">
-          <string>0</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="gainy">
-         <property name="text">
-          <string>0</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="gainz">
-         <property name="text">
-          <string>0</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="gainr">
-         <property name="text">
-          <string>0</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="gainp">
-         <property name="text">
-          <string>0</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="gainyaw">
-         <property name="text">
-          <string>0</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QComboBox" name="taskgain_combo">
-      <property name="geometry">
-       <rect>
-        <x>60</x>
-        <y>70</y>
-        <width>91</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <item>
-       <property name="text">
-        <string>COM</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Pelvis</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>UpperBody</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Foot</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Hand</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>R_Foot</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>L_Foot</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>R_Hand</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>L_Hand</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QPushButton" name="taskgain_resetbtn">
-      <property name="geometry">
-       <rect>
-        <x>60</x>
-        <y>170</y>
-        <width>91</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>RESET GAIN</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="taskgain_sendbtn">
-      <property name="geometry">
-       <rect>
-        <x>60</x>
-        <y>120</y>
-        <width>91</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>SEND GAIN</string>
-      </property>
-     </widget>
-     <widget class="QWidget" name="verticalLayoutWidget_53">
-      <property name="geometry">
-       <rect>
-        <x>190</x>
-        <y>70</y>
-        <width>31</width>
-        <height>182</height>
-       </rect>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout_41">
-       <item>
-        <widget class="QLabel" name="label_144">
-         <property name="text">
-          <string>X</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="label_145">
-         <property name="text">
-          <string>Y</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="label_146">
-         <property name="text">
-          <string>Z</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="label_147">
-         <property name="text">
-          <string>R</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="label_148">
-         <property name="text">
-          <string>P</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="label_143">
-         <property name="text">
-          <string>Y</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="verticalLayoutWidget_54">
-      <property name="geometry">
-       <rect>
-        <x>310</x>
-        <y>70</y>
-        <width>71</width>
-        <height>194</height>
-       </rect>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout_42">
-       <item>
-        <widget class="QLineEdit" name="gainx_2">
-         <property name="text">
-          <string>0</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="gainy_2">
-         <property name="text">
-          <string>0</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="gainz_2">
-         <property name="text">
-          <string>0</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="gainr_2">
-         <property name="text">
-          <string>0</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="gainp_2">
-         <property name="text">
-          <string>0</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="gainyaw_2">
-         <property name="text">
-          <string>0</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QLabel" name="label_149">
-      <property name="geometry">
-       <rect>
-        <x>230</x>
-        <y>40</y>
-        <width>71</width>
-        <height>25</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>P</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_150">
-      <property name="geometry">
-       <rect>
-        <x>310</x>
-        <y>40</y>
-        <width>71</width>
-        <height>25</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>D</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_151">
-      <property name="geometry">
-       <rect>
-        <x>60</x>
-        <y>10</y>
-        <width>201</width>
-        <height>25</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Task PD gain command</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-    </widget>
-    <widget class="QPushButton" name="pcSendCommand">
-     <property name="geometry">
-      <rect>
-       <x>190</x>
-       <y>320</y>
-       <width>161</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Send Command</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pcTorqueStandard">
-     <property name="geometry">
-      <rect>
-       <x>190</x>
-       <y>380</y>
-       <width>161</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Torque Standard</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pcTorque3con">
-     <property name="geometry">
-      <rect>
-       <x>190</x>
-       <y>560</y>
-       <width>161</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>3 Con</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pcTorquepos3">
-     <property name="geometry">
-      <rect>
-       <x>190</x>
-       <y>500</y>
-       <width>161</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>4 Con soft</string>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="poscom_trajtime">
-     <property name="geometry">
-      <rect>
-       <x>212</x>
-       <y>280</y>
-       <width>141</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>5.0</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_152">
-     <property name="geometry">
-      <rect>
-       <x>90</x>
-       <y>280</y>
-       <width>111</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>position control
- traj time</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pc4ConStandard">
-     <property name="geometry">
-      <rect>
-       <x>190</x>
-       <y>440</y>
-       <width>161</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>4 Con Standard</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="poscomgravity">
-     <property name="geometry">
-      <rect>
-       <x>90</x>
-       <y>330</y>
-       <width>92</width>
-       <height>23</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Gravity</string>
-     </property>
-    </widget>
-    <widget class="QCheckBox" name="poscomrelative">
-     <property name="geometry">
-      <rect>
-       <x>90</x>
-       <y>380</y>
-       <width>92</width>
-       <height>23</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Relative</string>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QWidget" name="WALKING">
-    <widget class="QFrame" name="frame_20">
-     <property name="geometry">
-      <rect>
-       <x>40</x>
-       <y>60</y>
-       <width>431</width>
-       <height>341</height>
-      </rect>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
-     </property>
-     <widget class="QLabel" name="label_141">
-      <property name="geometry">
-       <rect>
-        <x>310</x>
-        <y>50</y>
-        <width>67</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>left</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -3553,321 +2126,845 @@ F3 : HARD DAMPING(E2)</string>
      <widget class="QLabel" name="label_142">
       <property name="geometry">
        <rect>
-        <x>50</x>
-        <y>50</y>
-        <width>67</width>
-        <height>17</height>
+        <x>20</x>
+        <y>20</y>
+        <width>81</width>
+        <height>29</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="text">
-       <string>right</string>
+       <string>Forward</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
-     <widget class="QWidget" name="verticalLayoutWidget_46">
+     <widget class="QLabel" name="label_143">
       <property name="geometry">
        <rect>
-        <x>310</x>
-        <y>80</y>
-        <width>72</width>
-        <height>221</height>
+        <x>20</x>
+        <y>160</y>
+        <width>81</width>
+        <height>29</height>
        </rect>
       </property>
-      <layout class="QVBoxLayout" name="leftarm_layout_3"/>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Backward</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
      </widget>
-     <widget class="QWidget" name="verticalLayoutWidget_47">
+     <widget class="QLabel" name="label_144">
       <property name="geometry">
        <rect>
-        <x>50</x>
-        <y>80</y>
-        <width>71</width>
-        <height>221</height>
+        <x>110</x>
+        <y>190</y>
+        <width>141</width>
+        <height>29</height>
        </rect>
       </property>
-      <layout class="QVBoxLayout" name="rightarm_layout_3"/>
+      <property name="text">
+       <string>m backward driving</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
      </widget>
-     <widget class="QWidget" name="verticalLayoutWidget_50">
+     <widget class="QLineEdit" name="forward_meter">
       <property name="geometry">
        <rect>
-        <x>180</x>
+        <x>40</x>
         <y>50</y>
         <width>71</width>
-        <height>51</height>
+        <height>31</height>
        </rect>
       </property>
-      <layout class="QVBoxLayout" name="head_layout_3"/>
+      <property name="text">
+       <string>0.5</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
      </widget>
-     <widget class="QWidget" name="verticalLayoutWidget_51">
+     <widget class="QLabel" name="label_145">
       <property name="geometry">
        <rect>
-        <x>180</x>
-        <y>140</y>
-        <width>71</width>
-        <height>81</height>
+        <x>107</x>
+        <y>50</y>
+        <width>141</width>
+        <height>29</height>
        </rect>
       </property>
-      <layout class="QVBoxLayout" name="waist_layout_3"/>
+      <property name="text">
+       <string>m forward driving</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="forward_btn">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>90</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>Run</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="backward_btn">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>228</y>
+        <width>161</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>Run</string>
+      </property>
      </widget>
     </widget>
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QFrame" name="frame_6">
      <property name="geometry">
       <rect>
-       <x>520</x>
-       <y>100</y>
-       <width>89</width>
-       <height>25</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>PushButton</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_2">
-     <property name="geometry">
-      <rect>
-       <x>520</x>
-       <y>140</y>
-       <width>89</width>
-       <height>25</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>PushButton</string>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QWidget" name="AVATAR">
-    <widget class="QWidget" name="gridLayoutWidget_4">
-     <property name="geometry">
-      <rect>
-       <x>240</x>
-       <y>80</y>
-       <width>411</width>
-       <height>101</height>
-      </rect>
-     </property>
-     <layout class="QGridLayout" name="gridLayout">
-      <item row="1" column="0">
-       <layout class="QHBoxLayout" name="horizontalLayout_9">
-        <item>
-         <widget class="QLabel" name="label_220">
-          <property name="text">
-           <string>  Eye Depth  </string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QSlider" name="vr_eye_depth_slider">
-          <property name="cursor">
-           <cursorShape>SizeHorCursor</cursorShape>
-          </property>
-          <property name="maximum">
-           <number>100</number>
-          </property>
-          <property name="value">
-           <number>50</number>
-          </property>
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="tickPosition">
-           <enum>QSlider::TicksBelow</enum>
-          </property>
-          <property name="tickInterval">
-           <number>10</number>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-      <item row="2" column="0">
-       <layout class="QHBoxLayout" name="horizontalLayout_8">
-        <item>
-         <widget class="QLabel" name="label_221">
-          <property name="text">
-           <string>Eye Distance</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QSlider" name="vr_eye_distance_slider">
-          <property name="cursor">
-           <cursorShape>SizeHorCursor</cursorShape>
-          </property>
-          <property name="maximum">
-           <number>100</number>
-          </property>
-          <property name="value">
-           <number>50</number>
-          </property>
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="tickPosition">
-           <enum>QSlider::TicksBelow</enum>
-          </property>
-          <property name="tickInterval">
-           <number>10</number>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-      <item row="0" column="0">
-       <widget class="QLabel" name="label_222">
-        <property name="text">
-         <string>VR Calibration</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-    <widget class="QFrame" name="frame_23">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>60</y>
-       <width>211</width>
-       <height>381</height>
+       <x>30</x>
+       <y>50</y>
+       <width>561</width>
+       <height>361</height>
       </rect>
      </property>
      <property name="frameShape">
       <enum>QFrame::StyledPanel</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Sunken</enum>
+      <enum>QFrame::Raised</enum>
      </property>
-     <property name="lineWidth">
-      <number>10</number>
-     </property>
-     <widget class="QWidget" name="verticalLayoutWidget_60">
+     <widget class="QLabel" name="label_98">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>180</y>
-        <width>191</width>
-        <height>184</height>
+        <x>9</x>
+        <y>0</y>
+        <width>251</width>
+        <height>20</height>
        </rect>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout_44">
-       <item>
-        <widget class="QLabel" name="label_219">
-         <property name="text">
-          <string>Avatar Pose Calibration</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="still_pose_button">
-         <property name="text">
-          <string>Still Pose Calibration</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="T_pose_button">
-         <property name="text">
-          <string>T Pose Calibration</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="forward_pose_button">
-         <property name="text">
-          <string>Forward Calibration</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="reset_pose_button">
-         <property name="text">
-          <string>Calibration Reset</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="load_saved_cali_button">
-         <property name="text">
-          <string>Load Saved Calibration</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>RRT based Path Planner </string>
+      </property>
      </widget>
-     <widget class="QWidget" name="verticalLayoutWidget_59">
+     <widget class="QWidget" name="horizontalLayoutWidget_9">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>20</y>
-        <width>199</width>
+        <x>50</x>
+        <y>50</y>
+        <width>211</width>
         <height>101</height>
        </rect>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout_43">
+      <layout class="QHBoxLayout" name="horizontalLayout_15">
        <item>
-        <widget class="QLabel" name="label_154">
-         <property name="text">
-          <string>Upper Body Mode</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
+        <layout class="QVBoxLayout" name="verticalLayout_53">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_54">
+           <item>
+            <widget class="QLabel" name="label_164">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>X</string>
+             </property>
+             <property name="textFormat">
+              <enum>Qt::AutoText</enum>
+             </property>
+             <property name="scaledContents">
+              <bool>false</bool>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_165">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Y</string>
+             </property>
+             <property name="textFormat">
+              <enum>Qt::AutoText</enum>
+             </property>
+             <property name="scaledContents">
+              <bool>false</bool>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_166">
+             <property name="font">
+              <font>
+               <pointsize>11</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>Yaw (DEGREE)</string>
+             </property>
+             <property name="textFormat">
+              <enum>Qt::AutoText</enum>
+             </property>
+             <property name="scaledContents">
+              <bool>false</bool>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
        </item>
        <item>
-        <widget class="QComboBox" name="upperbody_mode">
+        <layout class="QVBoxLayout" name="verticalLayout_11">
          <item>
-          <property name="text">
-           <string>1. Init Pose</string>
-          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_55">
+           <item>
+            <widget class="QLineEdit" name="base_d1">
+             <property name="text">
+              <string>1</string>
+             </property>
+             <property name="maxLength">
+              <number>3</number>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="base_d2">
+             <property name="text">
+              <string>3</string>
+             </property>
+             <property name="maxLength">
+              <number>3</number>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="base_d3">
+             <property name="text">
+              <string>0</string>
+             </property>
+             <property name="maxLength">
+              <number>3</number>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
          </item>
-         <item>
-          <property name="text">
-           <string>2. Zero Pose</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>3. Freezing</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>4. Motion Retargeting(1)</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>5. Motion Retargeting(2)</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>6. Motion Retargeting(3)</string>
-          </property>
-         </item>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="send_upperbody_mode_button">
-         <property name="text">
-          <string>Send Mode</string>
-         </property>
-        </widget>
+        </layout>
        </item>
       </layout>
      </widget>
+     <widget class="QLabel" name="label_129">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>121</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Target Posture</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_130">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>161</y>
+        <width>121</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Planner Setting</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_131">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>193</y>
+        <width>131</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Optimization Time</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="base_p_opt_time">
+      <property name="geometry">
+       <rect>
+        <x>197</x>
+        <y>190</y>
+        <width>61</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>0.8</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_132">
+      <property name="geometry">
+       <rect>
+        <x>-3</x>
+        <y>263</y>
+        <width>131</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Planner Type</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="base_p_type">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>265</y>
+        <width>151</width>
+        <height>27</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>187</width>
+        <height>27</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(204, 0, 0);
+color: rgb(238, 238, 236);</string>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <item>
+       <property name="text">
+        <string>0. Informed RRT*</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>1. BFMT</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QPushButton" name="base_p_run">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>310</y>
+        <width>231</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>Run</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="base_p_set_btn">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>310</y>
+        <width>231</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(204, 0, 0);
+color: rgb(238, 238, 236);</string>
+      </property>
+      <property name="text">
+       <string>Set Configuration</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="base_p_car_radius">
+      <property name="geometry">
+       <rect>
+        <x>197</x>
+        <y>227</y>
+        <width>61</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>0.3</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_141">
+      <property name="geometry">
+       <rect>
+        <x>13</x>
+        <y>230</y>
+        <width>131</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Car Radius</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_146">
+      <property name="geometry">
+       <rect>
+        <x>269</x>
+        <y>24</y>
+        <width>171</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>Obstacle Information</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="obs_list">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>50</y>
+        <width>211</width>
+        <height>111</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="obs_del_btn">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>50</y>
+        <width>51</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>delete</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="obs_add_btn">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>170</y>
+        <width>51</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Add</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="horizontalLayoutWidget_10">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>170</y>
+        <width>201</width>
+        <height>62</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_16">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_62">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_63">
+           <item>
+            <widget class="QLabel" name="label_173">
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>X1</string>
+             </property>
+             <property name="textFormat">
+              <enum>Qt::AutoText</enum>
+             </property>
+             <property name="scaledContents">
+              <bool>false</bool>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_176">
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>y1</string>
+             </property>
+             <property name="textFormat">
+              <enum>Qt::AutoText</enum>
+             </property>
+             <property name="scaledContents">
+              <bool>false</bool>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_12">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_64">
+           <item>
+            <widget class="QLineEdit" name="obs_x1">
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+               <weight>50</weight>
+               <bold>false</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>0.5</string>
+             </property>
+             <property name="maxLength">
+              <number>90</number>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="obs_y1">
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+               <weight>50</weight>
+               <bold>false</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>0.5</string>
+             </property>
+             <property name="maxLength">
+              <number>90</number>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_65">
+         <item>
+          <widget class="QLabel" name="label_178">
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>X2</string>
+           </property>
+           <property name="textFormat">
+            <enum>Qt::AutoText</enum>
+           </property>
+           <property name="scaledContents">
+            <bool>false</bool>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_179">
+           <property name="font">
+            <font>
+             <pointsize>9</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>y2</string>
+           </property>
+           <property name="textFormat">
+            <enum>Qt::AutoText</enum>
+           </property>
+           <property name="scaledContents">
+            <bool>false</bool>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_13">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_67">
+           <item>
+            <widget class="QLineEdit" name="obs_x2">
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+               <weight>50</weight>
+               <bold>false</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>-0.5</string>
+             </property>
+             <property name="maxLength">
+              <number>90</number>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLineEdit" name="obs_y2">
+             <property name="font">
+              <font>
+               <pointsize>9</pointsize>
+               <weight>50</weight>
+               <bold>false</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>-0.5</string>
+             </property>
+             <property name="maxLength">
+              <number>90</number>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QPlainTextEdit" name="base_log">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>420</y>
+       <width>811</width>
+       <height>491</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+     <property name="plainText">
+      <string>-- Base Path Log --
+</string>
+     </property>
+     <property name="overwriteMode">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_44">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>221</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="text">
+      <string>Base Control</string>
+     </property>
     </widget>
    </widget>
   </widget>
@@ -5375,7 +4472,7 @@ F3 : HARD DAMPING(E2)</string>
     </layout>
    </widget>
   </widget>
-  <widget class="QPushButton" name="gravity_button">
+  <widget class="QPushButton" name="grasp_button">
    <property name="geometry">
     <rect>
      <x>1410</x>
@@ -5393,7 +4490,7 @@ F3 : HARD DAMPING(E2)</string>
     </font>
    </property>
    <property name="text">
-    <string>GRAVITY</string>
+    <string>GRASP</string>
    </property>
    <property name="checkable">
     <bool>false</bool>

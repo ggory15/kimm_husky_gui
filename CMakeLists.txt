@@ -27,7 +27,7 @@ catkin_python_setup()
 catkin_package(
   #INCLUDE_DIRS include
   LIBRARIES ${PROJECT_NAME}
-  CATKIN_DEPENDS roscpp rqt_gui rqt_gui_cpp sensor_msgs std_msgs geometry_msgs mujoco_ros_msgs
+  CATKIN_DEPENDS roscpp rqt_gui rqt_gui_cpp sensor_msgs std_msgs geometry_msgs mujoco_ros_msgs kimm_joint_planner_ros_interface kimm_path_planner_ros_interface kimm_se3_planner_ros_interface
   #DEPENDS system_lib
 )
 

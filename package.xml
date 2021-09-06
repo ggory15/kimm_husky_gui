@@ -70,7 +70,9 @@
   <exec_depend>std_msgs</exec_depend>
   <exec_depend>geometry_msgs</exec_depend>
   <exec_depend>mujoco_ros_msgs</exec_depend>
-
+  <depend>kimm_joint_planner_ros_interface</depend>
+  <depend>kimm_path_planner_ros_interface</depend>
+  <depend>kimm_se3_planner_ros_interface</depend>
 
   <!-- The export tag contains other, unspecified, tags -->
   <export>
