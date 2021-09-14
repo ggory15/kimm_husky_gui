@@ -76,14 +76,13 @@ add_library(${PROJECT_NAME}
   ${husky_gui_SRCS}
   ${husky_gui_MOCS}
   ${husky_gui_UIS_H}
-  ${qxtglobalshortcut}
 )
 
 target_link_libraries(${PROJECT_NAME}
   ${catkin_LIBRARIES}
 )
 
-target_link_libraries(${PROJECT_NAME} Qt5::Widgets Qt5::Core Qt5::Gui Qt5::X11Extras Qt5::GuiPrivate)
+target_link_libraries(${PROJECT_NAME} Qt5::Widgets Qt5::Core Qt5::Gui Qt5::X11Extras)
 TARGET_INCLUDE_DIRECTORIES(${PROJECT_NAME} SYSTEM PUBLIC ${EIGEN3_INCLUDE_DIR})
 
 add_dependencies(${PROJECT_NAME} ${catkin_EXPORTED_TARGETS})

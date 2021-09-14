@@ -78,6 +78,10 @@ namespace kimm_husky_gui
             bool_msg_.data = false;
             run_pub_.publish(bool_msg_);
         };
+        virtual void QuitCallback(){
+            bool_msg_.data = true;
+            quit_pub_.publish(bool_msg_);
+        }
         virtual void InitCallback(){
             int16_msg_.data = 1;
             custom_ctrl_pub_.publish(int16_msg_);
@@ -778,7 +782,7 @@ namespace kimm_husky_gui
         }
 
     public:
-        ros::Publisher run_pub_, custom_ctrl_pub_, base_traj_resp_pub_, base_traj_req_pub_, obs_pub_, ee_traj_resp_pub_;
+        ros::Publisher run_pub_, quit_pub_, custom_ctrl_pub_, base_traj_resp_pub_, base_traj_req_pub_, obs_pub_, ee_traj_resp_pub_;
         ros::Subscriber simtime_sub_, jointstate_sub_, torquestate_sub_, base_state_sub_, ee_state_sub_;
         ros::ServiceClient joint_plan_client_, mobile_plan_client_, se3_plan_client_;
 

@@ -22,6 +22,8 @@ namespace kimm_husky_gui
         setObjectName("HuskyGui");
 
         run_pub_ = nh_.advertise<std_msgs::Bool>("/mujoco_ros_interface/sim_run", 100);
+        quit_pub_ = nh_.advertise<std_msgs::Bool>("/mujoco_ros_interface/sim_quit", 100);
+
         custom_ctrl_pub_ = nh_.advertise<std_msgs::Int16>("/mujoco_ros_interface/ctrl_type", 100);
         base_traj_resp_pub_ = nh_.advertise<visualization_msgs::MarkerArray>("/ns0/kimm_mobile_plan_markers/mobile/response", 100);
         base_traj_req_pub_ = nh_.advertise<visualization_msgs::MarkerArray>("/ns0/kimm_mobile_plan_markers/mobile/request", 100);
@@ -66,6 +68,8 @@ namespace kimm_husky_gui
         // Basic Interface to Mujoco
         connect(ui_.simulon_button, SIGNAL(pressed()), this, SLOT(EnableSimulCallback()));
         connect(ui_.simuloff_button, SIGNAL(pressed()), this, SLOT(DisableSimulCallback()));
+        connect(ui_.quit_button, SIGNAL(pressed()), this, SLOT(QuitCallback()));
+
         connect(ui_.init_button, SIGNAL(pressed()), this, SLOT(InitCallback()));
         connect(ui_.grasp_button, SIGNAL(pressed()), this, SLOT(GraspCallback()));
        
