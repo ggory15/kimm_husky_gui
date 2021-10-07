@@ -20,6 +20,7 @@ find_package(catkin REQUIRED COMPONENTS
 
 find_package(Qt5 REQUIRED Core Widgets X11Extras Gui)
 find_package(Eigen3)
+find_package(pinocchio)
 
 set(CMAKE_AUTOMOC ON)
 catkin_python_setup()
@@ -76,13 +77,15 @@ add_library(${PROJECT_NAME}
   ${husky_gui_SRCS}
   ${husky_gui_MOCS}
   ${husky_gui_UIS_H}
+  ${qxtglobalshortcut}
 )
 
 target_link_libraries(${PROJECT_NAME}
   ${catkin_LIBRARIES}
-)
+  ${pinocchio_LIBRARIES}
+  )
 
-target_link_libraries(${PROJECT_NAME} Qt5::Widgets Qt5::Core Qt5::Gui Qt5::X11Extras)
+target_link_libraries(${PROJECT_NAME} Qt5::Widgets Qt5::Core Qt5::Gui Qt5::X11Extras Qt5::GuiPrivate)
 TARGET_INCLUDE_DIRECTORIES(${PROJECT_NAME} SYSTEM PUBLIC ${EIGEN3_INCLUDE_DIR})
 
 add_dependencies(${PROJECT_NAME} ${catkin_EXPORTED_TARGETS})

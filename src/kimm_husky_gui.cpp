@@ -20,32 +20,72 @@ namespace kimm_husky_gui
         qRegisterMetaType<geometry_msgs::TransformConstPtr>();
 
         setObjectName("HuskyGui");
+        nh_.getParam("/issimulation", issimulation_);  
+        string model_path, urdf_name;
+        string group_name;
+        nh_.getParam("/robot_group", group_name);   
+        nh_.getParam("/" + group_name +"/rviz_urdf_path", model_path);    
+        nh_.getParam("/" + group_name +"/rviz_urdf", urdf_name);  
+
+        vector<string> package_dirs;
+        package_dirs.push_back(model_path);
+        string urdfFileName = package_dirs[0] + urdf_name;
+        pinocchio::urdf::buildModel(urdfFileName, model_, false);       
+        ROS_INFO_STREAM(urdfFileName);
+        for (int i=1; i<14; i++)
+            ROS_INFO_STREAM(model_.names[i]);
 
         run_pub_ = nh_.advertise<std_msgs::Bool>("/mujoco_ros_interface/sim_run", 100);
         quit_pub_ = nh_.advertise<std_msgs::Bool>("/mujoco_ros_interface/sim_quit", 100);
 
-        custom_ctrl_pub_ = nh_.advertise<std_msgs::Int16>("/mujoco_ros_interface/ctrl_type", 100);
-        base_traj_resp_pub_ = nh_.advertise<visualization_msgs::MarkerArray>("/ns0/kimm_mobile_plan_markers/mobile/response", 100);
-        base_traj_req_pub_ = nh_.advertise<visualization_msgs::MarkerArray>("/ns0/kimm_mobile_plan_markers/mobile/request", 100);
-        ee_traj_resp_pub_ = nh_.advertise<visualization_msgs::MarkerArray>("/ns0/kimm_se3_plan_markers/robot/response", 100);
-        // obs_pub_ = nh_.advertise<visualization_msgs::MarkerArray>("/ns0/kimm_mobile_plan_markers/mobile/request", 100);
+        base_traj_resp_pub_ = nh_.advertise<visualization_msgs::MarkerArray>("/" + group_name + "/kimm_mobile_plan_markers/mobile/response", 100);
+        base_traj_req_pub_ = nh_.advertise<visualization_msgs::MarkerArray>("/" + group_name + "/kimm_mobile_plan_markers/mobile/request", 100);
+        ee_traj_resp_pub_ = nh_.advertise<visualization_msgs::MarkerArray>("/" + group_name + "/kimm_se3_plan_markers/robot/response", 100);
+        joint_state_pub_ = nh_.advertise<sensor_msgs::JointState>("/" + group_name +"/joint_states", 100);
 
-        simtime_sub_ = nh_.subscribe("/mujoco_ros_interface/sim_time", 100, &HuskyGui::timerCallback, this);
-        jointstate_sub_ = nh_.subscribe("/mujoco_ros_interface/joint_states", 100, &HuskyGui::jointStateCallback, this);
-        torquestate_sub_ = nh_.subscribe("/mujoco_ros_interface/joint_set", 100, &HuskyGui::torqueStateCallback, this);
-        base_state_sub_ = nh_.subscribe("ns0/mujoco_ros_interface/base_state", 100, &HuskyGui::baseStateCallback, this);
-        ee_state_sub_ = nh_.subscribe("ns0/mujoco_ros_interface/ee_state", 100, &HuskyGui::eeStateCallback, this);
+        if (issimulation_){
+            custom_ctrl_pub_ = nh_.advertise<std_msgs::Int16>("/mujoco_ros_interface/ctrl_type", 100);
+            simtime_sub_ = nh_.subscribe("/mujoco_ros_interface/sim_time", 100, &HuskyGui::timerCallback, this);
+            jointstate_sub_ = nh_.subscribe("/mujoco_ros_interface/joint_states", 100, &HuskyGui::jointStateCallback, this);
+            torquestate_sub_ = nh_.subscribe("/mujoco_ros_interface/joint_set", 100, &HuskyGui::torqueStateCallback, this);
+            ee_state_sub_ = nh_.subscribe("/mujoco_ros_interface/ee_state", 100, &HuskyGui::eeStateCallback, this);
+            base_state_sub_ = nh_.subscribe("/mujoco_ros_interface/base_state", 100, &HuskyGui::baseStateCallback, this);
+        }
+        else {
+            custom_ctrl_pub_ = nh_.advertise<std_msgs::Int16>("/" + group_name + "/real_robot/ctrl_type", 100);
+            simtime_sub_ = nh_.subscribe("/" + group_name + "/time", 100, &HuskyGui::timerCallback, this);
+            jointstate_sub_ = nh_.subscribe("/" + group_name + "/real_robot/joint_states", 100, &HuskyGui::jointStateCallback, this);
+            torquestate_sub_ = nh_.subscribe("/" + group_name + "/real_robot/joint_set", 100, &HuskyGui::torqueStateCallback, this);
+            ee_state_sub_ = nh_.subscribe("/" + group_name + "/real_robot/ee_state", 100, &HuskyGui::eeStateCallback, this);
+            base_state_sub_ = nh_.subscribe("/" + group_name + "/real_robot/base_state", 100, &HuskyGui::baseStateCallback, this);
+        }
 
-        joint_plan_client_ = nh_.serviceClient<kimm_joint_planner_ros_interface::plan_joint_path>("/ns0/kimm_joint_planner_ros_interface_server/plan_joint_path");
-        mobile_plan_client_ = nh_.serviceClient<kimm_path_planner_ros_interface::plan_mobile_path>("/ns0/kimm_path_planner_ros_interface_server/plan_mobile_path");
-        se3_plan_client_ = nh_.serviceClient<kimm_se3_planner_ros_interface::plan_se3_path>("/ns0/kimm_se3_planner_ros_interface_server/plan_se3_path");
-       
+        joint_plan_client_ = nh_.serviceClient<kimm_joint_planner_ros_interface::plan_joint_path>("/" + group_name + "/kimm_joint_planner_ros_interface_server/plan_joint_path");
+        mobile_plan_client_ = nh_.serviceClient<kimm_path_planner_ros_interface::plan_mobile_path>("/" + group_name + "/kimm_path_planner_ros_interface_server/plan_mobile_path");
+        se3_plan_client_ = nh_.serviceClient<kimm_se3_planner_ros_interface::plan_se3_path>("/" + group_name + "/kimm_se3_planner_ros_interface_server/plan_se3_path");
+        
+        int nq = 4 + 9;
+        joint_state_msg_.name.resize(nq);
+        joint_state_msg_.position.resize(nq);
+        joint_state_msg_.velocity.resize(nq);
+        joint_state_msg_.effort.resize(nq);
+        
+        for (int i=0; i<nq; i++){
+            joint_state_msg_.name[i] = model_.names[i+1];
+            joint_state_msg_.position[i] = 0.0;
+            joint_state_msg_.velocity[i] = 0.0;
+            joint_state_msg_.effort[i] = 0.0;
+        }
+
         q_.setZero(9);
         x_.setZero(6);
     }
     void HuskyGui::initPlugin(qt_gui_cpp::PluginContext& context)
     {
+    	QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
         widget_ = new QWidget();
+        int horizontalDpi = widget_->logicalDpiX(); 
+        cout << horizontalDpi << endl;
         ui_.setupUi(widget_);
 
         if (context.serialNumber() > 1)
@@ -55,8 +95,9 @@ namespace kimm_husky_gui
         context.addWidget(widget_);
 
         ui_.simulon_button->setShortcut(QKeySequence(Qt::Key_R));
-        ui_.simuloff_button->setShortcut(QKeySequence(Qt::Key_P));
-        ui_.grasp_button->setShortcut(QKeySequence(Qt::Key_G));
+        ui_.simuloff_button->setShortcut(QKeySequence(Qt::Key_G));
+        ui_.grasp_button->setShortcut(QKeySequence(Qt::Key_Z));
+        ui_.quit_button->setShortcut(QKeySequence(Qt::Key_Q));
 
         // Basic Interface from Mujoco
         connect(this, &HuskyGui::timerCallback, this, &HuskyGui::Timercb);
@@ -66,10 +107,9 @@ namespace kimm_husky_gui
         connect(this, &HuskyGui::eeStateCallback, this, &HuskyGui::EEcb);
 
         // Basic Interface to Mujoco
+        connect(ui_.quit_button, SIGNAL(pressed()), this, SLOT(QuitCallback()));
         connect(ui_.simulon_button, SIGNAL(pressed()), this, SLOT(EnableSimulCallback()));
         connect(ui_.simuloff_button, SIGNAL(pressed()), this, SLOT(DisableSimulCallback()));
-        connect(ui_.quit_button, SIGNAL(pressed()), this, SLOT(QuitCallback()));
-
         connect(ui_.init_button, SIGNAL(pressed()), this, SLOT(InitCallback()));
         connect(ui_.grasp_button, SIGNAL(pressed()), this, SLOT(GraspCallback()));
        

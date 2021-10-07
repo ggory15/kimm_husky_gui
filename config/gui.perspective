@@ -4,14 +4,14 @@
     "mainwindow": {
       "keys": {
         "geometry": {
-          "repr(QByteArray.hex)": "QtCore.QByteArray(b'01d9d0cb000300000000004a0000001b00000b7c000004450000004a0000004000000b7c00000445000000000000000014000000004a0000004000000b7c00000445')",
+          "repr(QByteArray.hex)": "QtCore.QByteArray(b'01d9d0cb00030000000001c5000001010000081200000542000001c500000126000008120000054200000000000000001400000001c5000001260000081200000542')",
           "type": "repr(QByteArray.hex)",
-          "pretty-print": "     J   | E J @ | E      J @ | E"
+          "pretty-print": "           B   &   B        &   B"
         },
         "state": {
-          "repr(QByteArray.hex)": "QtCore.QByteArray(b'000000ff00000000fd000000010000000300000b33000003dafc0100000002fb00000056006b0069006d006d005f006800750073006b0079005f006700750069005f005f004800750073006b0079004700750069005f005f0031005f005f004800750073006b00790047007500690057006900640067006500740100000000000006360000050000fffffffb00000026007200710074005f007200760069007a005f005f005200560069007a005f005f0031005f005f010000063c000004f70000011900ffffff00000b330000000000000004000000040000000800000008fc00000001000000030000000100000036004d0069006e0069006d0069007a006500640044006f0063006b00570069006400670065007400730054006f006f006c0062006100720000000000ffffffff0000000000000000')",
+          "repr(QByteArray.hex)": "QtCore.QByteArray(b'000000ff00000000fd00000001000000030000064e000003f1fc0100000004fb00000056006b0069006d006d005f006800750073006b0079005f006700750069005f005f004800750073006b0079004700750069005f005f0031005f005f004800750073006b007900470075006900570069006400670065007401000000000000064e0000050000fffffffb00000056006b0069006d006d005f006800750073006b0079005f006700750069005f005f004800750073006b0079004700750069005f005f0032005f005f004800750073006b0079004700750069005700690064006700650074010000076e000007670000000000000000fb0000005c006b0069006d006d005f006600720061006e006b0061005f006700750069005f005f004600720061006e006b0061004700750069005f005f0031005f005f004600720061006e006b006100470075006900570069006400670065007401000000000000064e0000000000000000fb00000026007200710074005f007200760069007a005f005f005200560069007a005f005f0031005f005f01000006490000088c00000000000000000000064e0000000000000004000000040000000800000008fc00000001000000030000000100000036004d0069006e0069006d0069007a006500640044006f0063006b00570069006400670065007400730054006f006f006c0062006100720000000000ffffffff0000000000000000')",
           "type": "repr(QByteArray.hex)",
-          "pretty-print": "                 Vkimm_husky_gui__HuskyGui__1__HuskyGuiWidget          &rqt_rviz__RViz__1__                            6MinimizedDockWidgetsToolbar        "
+          "pretty-print": "                 Vkimm_husky_gui__HuskyGui__1__HuskyGuiWidget          Vkimm_husky_gui__HuskyGui__2__HuskyGuiWidget          \\kimm_franka_gui__FrankaGui__1__FrankaGuiWidget          &rqt_rviz__RViz__1__                            6MinimizedDockWidgetsToolbar        "
         }
       },
       "groups": {
@@ -29,11 +29,33 @@
     "pluginmanager": {
       "keys": {
         "running-plugins": {
-          "repr": "{'kimm_husky_gui/HuskyGui': [1], 'rqt_rviz/RViz': [1]}",
+          "repr": "{'kimm_husky_gui/HuskyGui': [1]}",
           "type": "repr"
         }
       },
       "groups": {
+        "plugin__kimm_franka_gui__FrankaGui__1": {
+          "keys": {},
+          "groups": {
+            "dock_widget__FrankaGuiWidget": {
+              "keys": {
+                "dock_widget_title": {
+                  "repr": "'KIMM Franka UI'",
+                  "type": "repr"
+                },
+                "dockable": {
+                  "repr": "'true'",
+                  "type": "repr"
+                },
+                "parent": {
+                  "repr": "None",
+                  "type": "repr"
+                }
+              },
+              "groups": {}
+            }
+          }
+        },
         "plugin__kimm_husky_gui__HuskyGui__1": {
           "keys": {},
           "groups": {
@@ -303,11 +325,11 @@
             "dock_widget__": {
               "keys": {
                 "dock_widget_title": {
-                  "repr": "'urdf.rviz[*] - RViz (33)'",
+                  "repr": "'franka_rviz.rviz[*] - RViz'",
                   "type": "repr"
                 },
                 "dockable": {
-                  "repr": "True",
+                  "repr": "'true'",
                   "type": "repr"
                 },
                 "parent": {
@@ -320,11 +342,11 @@
             "plugin": {
               "keys": {
                 "hide_menu": {
-                  "repr": "False",
+                  "repr": "'false'",
                   "type": "repr"
                 },
                 "rviz_config_file": {
-                  "repr": "'/home/ggory15/kimm_catkin/src/kimm_mujoco_simulation/basic_script/launch/urdf.rviz'",
+                  "repr": "'/home/ggory15/kimm_catkin/src/kimm_franka_gui/config/franka_rviz.rviz'",
                   "type": "repr"
                 }
               },

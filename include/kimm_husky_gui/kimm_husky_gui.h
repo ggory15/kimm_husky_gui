@@ -1,6 +1,14 @@
 #ifndef kimm_husky_gui__HuskyGUI_H
 #define kimm_husky_gui__HuskyGUI_H
 
+#include <pinocchio/fwd.hpp>
+#include <pinocchio/multibody/data.hpp>
+#include <pinocchio/multibody/model.hpp>
+#include <pinocchio/spatial/fwd.hpp>
+#include <pinocchio/multibody/model.hpp>
+#include <pinocchio/parsers/urdf.hpp>
+
+
 #include <rqt_gui_cpp/plugin.h>
 #include "kimm_husky_gui/ui_kimm_husky_gui.h"
 
@@ -45,6 +53,8 @@
 #define RAD M_PI/180.0
 
 using namespace std;
+using namespace pinocchio;
+
 namespace kimm_husky_gui
 {
     class HuskyGui : public rqt_gui_cpp::Plugin
@@ -67,6 +77,10 @@ namespace kimm_husky_gui
         std_msgs::Int16 int16_msg_;
         Eigen::Quaternion<double> _quat;
         Eigen::Vector3d _angles;
+        Model model_;    
+
+        ros::Publisher joint_state_pub_;
+        sensor_msgs::JointState joint_state_msg_;
 
     protected slots:
         protected slots:
@@ -75,17 +89,17 @@ namespace kimm_husky_gui
             run_pub_.publish(bool_msg_);
         };
         virtual void DisableSimulCallback(){
-            bool_msg_.data = false;
-            run_pub_.publish(bool_msg_);
+            int16_msg_.data = 0;
+            custom_ctrl_pub_.publish(int16_msg_);
+        };
+        virtual void InitCallback(){
+            int16_msg_.data = 1;
+            custom_ctrl_pub_.publish(int16_msg_);
         };
         virtual void QuitCallback(){
             bool_msg_.data = true;
             quit_pub_.publish(bool_msg_);
         }
-        virtual void InitCallback(){
-            int16_msg_.data = 1;
-            custom_ctrl_pub_.publish(int16_msg_);
-        };
         virtual void GraspCallback(){
             int16_msg_.data = 899;
             custom_ctrl_pub_.publish(int16_msg_);
@@ -161,6 +175,12 @@ namespace kimm_husky_gui
             q_(1) = 0;
             for (int i=0; i<7; i++)
                 q_(i+2) = msg->position[11+i];
+
+            for (int i=0; i<13; i++){
+                joint_state_msg_.position[i] = 0.0;
+            }
+            joint_state_msg_.header.stamp = ros::Time::now();            
+            joint_state_pub_.publish(joint_state_msg_);
 
         }; 
         virtual void Torquecb(const mujoco_ros_msgs::JointSetConstPtr &msg){
@@ -797,6 +817,7 @@ namespace kimm_husky_gui
         std::vector<sensor_msgs::JointState> target_q_vec_;
         std::vector<geometry_msgs::Transform>  target_x_vec_;
         std::vector<kimm_path_planner_ros_interface::Obstacle2D> obs_vec_;
+        bool issimulation_;
 
         
 
