@@ -151,34 +151,82 @@ namespace kimm_husky_gui
             ui_.currenttime->setText(QString::number(msg->data, 'f', 3));
         };
         virtual void Jointcb(const sensor_msgs::JointStateConstPtr &msg){
-            ui_.robot_p1->setText(QString::number(msg->position[7] * DEGREE , 'f', 3));
-            ui_.robot_p2->setText(QString::number(msg->position[8] * DEGREE , 'f', 3));
-            ui_.robot_p3->setText(QString::number(msg->position[11] * DEGREE , 'f', 3));
-            ui_.robot_p4->setText(QString::number(msg->position[12] * DEGREE , 'f', 3));
-            ui_.robot_p5->setText(QString::number(msg->position[13] * DEGREE , 'f', 3));
-            ui_.robot_p6->setText(QString::number(msg->position[14] * DEGREE , 'f', 3));
-            ui_.robot_p7->setText(QString::number(msg->position[15] * DEGREE , 'f', 3));
-            ui_.robot_p8->setText(QString::number(msg->position[16] * DEGREE , 'f', 3));
-            ui_.robot_p9->setText(QString::number(msg->position[17] * DEGREE , 'f', 3));
+            if (issimulation_){
+                ui_.robot_p1->setText(QString::number(msg->position[7] * DEGREE , 'f', 3));
+                ui_.robot_p2->setText(QString::number(msg->position[8] * DEGREE , 'f', 3));
+                ui_.robot_p3->setText(QString::number(msg->position[11] * DEGREE , 'f', 3));
+                ui_.robot_p4->setText(QString::number(msg->position[12] * DEGREE , 'f', 3));
+                ui_.robot_p5->setText(QString::number(msg->position[13] * DEGREE , 'f', 3));
+                ui_.robot_p6->setText(QString::number(msg->position[14] * DEGREE , 'f', 3));
+                ui_.robot_p7->setText(QString::number(msg->position[15] * DEGREE , 'f', 3));
+                ui_.robot_p8->setText(QString::number(msg->position[16] * DEGREE , 'f', 3));
+                ui_.robot_p9->setText(QString::number(msg->position[17] * DEGREE , 'f', 3));
 
-            ui_.robot_v1->setText(QString::number(msg->velocity[6] * DEGREE , 'f', 3));
-            ui_.robot_v2->setText(QString::number(msg->velocity[7] * DEGREE , 'f', 3));
-            ui_.robot_v3->setText(QString::number(msg->velocity[10] * DEGREE , 'f', 3));
-            ui_.robot_v4->setText(QString::number(msg->velocity[11] * DEGREE , 'f', 3));
-            ui_.robot_v5->setText(QString::number(msg->velocity[12] * DEGREE , 'f', 3));
-            ui_.robot_v6->setText(QString::number(msg->velocity[13] * DEGREE , 'f', 3));
-            ui_.robot_v7->setText(QString::number(msg->velocity[14] * DEGREE , 'f', 3));
-            ui_.robot_v8->setText(QString::number(msg->velocity[15] * DEGREE , 'f', 3));
-            ui_.robot_v9->setText(QString::number(msg->velocity[16] * DEGREE , 'f', 3));
+                ui_.robot_v1->setText(QString::number(msg->velocity[6] * DEGREE , 'f', 3));
+                ui_.robot_v2->setText(QString::number(msg->velocity[7] * DEGREE , 'f', 3));
+                ui_.robot_v3->setText(QString::number(msg->velocity[10] * DEGREE , 'f', 3));
+                ui_.robot_v4->setText(QString::number(msg->velocity[11] * DEGREE , 'f', 3));
+                ui_.robot_v5->setText(QString::number(msg->velocity[12] * DEGREE , 'f', 3));
+                ui_.robot_v6->setText(QString::number(msg->velocity[13] * DEGREE , 'f', 3));
+                ui_.robot_v7->setText(QString::number(msg->velocity[14] * DEGREE , 'f', 3));
+                ui_.robot_v8->setText(QString::number(msg->velocity[15] * DEGREE , 'f', 3));
+                ui_.robot_v9->setText(QString::number(msg->velocity[16] * DEGREE , 'f', 3));
 
-            q_(0) = 0;
-            q_(1) = 0;
-            for (int i=0; i<7; i++)
-                q_(i+2) = msg->position[11+i];
-
-            for (int i=0; i<13; i++){
-                joint_state_msg_.position[i] = 0.0;
+                q_(0) = 0;
+                q_(1) = 0;
+                for (int i=0; i<7; i++)
+                    q_(i+2) = msg->position[11+i];
             }
+            else{
+                ui_.robot_p1->setText(QString::number(msg->position[0] * DEGREE , 'f', 3));
+                ui_.robot_p2->setText(QString::number(msg->position[1] * DEGREE , 'f', 3));
+                ui_.robot_p3->setText(QString::number(msg->position[2] * DEGREE , 'f', 3));
+                ui_.robot_p4->setText(QString::number(msg->position[3] * DEGREE , 'f', 3));
+                ui_.robot_p5->setText(QString::number(msg->position[4] * DEGREE , 'f', 3));
+                ui_.robot_p6->setText(QString::number(msg->position[5] * DEGREE , 'f', 3));
+                ui_.robot_p7->setText(QString::number(msg->position[6] * DEGREE , 'f', 3));
+                ui_.robot_p8->setText(QString::number(msg->position[7] * DEGREE , 'f', 3));
+                ui_.robot_p9->setText(QString::number(msg->position[8] * DEGREE , 'f', 3));
+
+                ui_.robot_v1->setText(QString::number(msg->velocity[0] * DEGREE , 'f', 3));
+                ui_.robot_v2->setText(QString::number(msg->velocity[1] * DEGREE , 'f', 3));
+                ui_.robot_v3->setText(QString::number(msg->velocity[2] * DEGREE , 'f', 3));
+                ui_.robot_v4->setText(QString::number(msg->velocity[3] * DEGREE , 'f', 3));
+                ui_.robot_v5->setText(QString::number(msg->velocity[4] * DEGREE , 'f', 3));
+                ui_.robot_v6->setText(QString::number(msg->velocity[5] * DEGREE , 'f', 3));
+                ui_.robot_v7->setText(QString::number(msg->velocity[6] * DEGREE , 'f', 3));
+                ui_.robot_v8->setText(QString::number(msg->velocity[7] * DEGREE , 'f', 3));
+                ui_.robot_v9->setText(QString::number(msg->velocity[8] * DEGREE , 'f', 3));
+
+                q_(0) = 0;
+                q_(1) = 0;
+                for (int i=0; i<7; i++)
+                    q_(i+2) = msg->position[11+i];
+            }
+
+            if (issimulation_){
+                for (int i=0; i<4; i++)
+                    joint_state_msg_.position[i] = msg->position[i+7];
+
+                for (int i=0; i<7; i++)
+                    joint_state_msg_.position[i+4] = msg->position[i+11];
+
+                for (int i=0; i<2; i++)
+                    joint_state_msg_.position[i+11] = msg->position[i+18];
+            }
+            else{
+                joint_state_msg_.position[0] = msg->position[0];
+                joint_state_msg_.position[2] = msg->position[0];
+                joint_state_msg_.position[1] = msg->position[1];
+                joint_state_msg_.position[3] = msg->position[1];
+
+                for (int i=0; i<7; i++)
+                    joint_state_msg_.position[i+4] = msg->position[i+2];
+
+                for (int i=0; i<2; i++)
+                    joint_state_msg_.position[i+11] = msg->position[i+9];
+            }
+                         
             joint_state_msg_.header.stamp = ros::Time::now();            
             joint_state_pub_.publish(joint_state_msg_);
 
