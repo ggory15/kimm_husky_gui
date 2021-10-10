@@ -1,6 +1,6 @@
 <launch>
     <node name="husky_rqt_dashboard" pkg="rqt_gui" type="rqt_gui" respawn="false" output="screen" args="--perspective-file $(find kimm_husky_gui)/config/gui.perspective" />
-    <group ns ="ns0">
+    <group ns ="ns0_gui">
 	    <param name="robot_description" command="cat $(find husky_description)/husky_single/husky_panda_rviz.urdf" />
 		<node pkg="tf2_ros" type="static_transform_publisher" name="odom" args="0 0 0 0 0 0 world panda_link0" />
 		<param name="rviz_urdf_path" type="string" value="$(find husky_description)"/>
@@ -9,11 +9,12 @@
 		</node>
 		<node name="kimm_se3_planner_ros_interface_server" pkg="kimm_se3_planner_ros_interface" type="kimm_se3_planner_ros_interface_server" output="screen" >
 		</node>
-        <node name="kimm_path_planner_ros_interface_server" pkg="kimm_path_planner_ros_interface" type="kimm_path_planner_ros_interface_server" output="screen" >
+		<node name="kimm_path_planner_ros_interface_server" pkg="kimm_path_planner_ros_interface" type="kimm_path_planner_ros_interface_server" output="screen" >
             <param name="save_path" type="string" value="$(find kimm_path_planner_ros_interface)/result/mobile.json"/>    
             <param name="robot_planning_model" type="string" value="$(find kimm_path_planner)/robot_model/car.svg"/>
             <param name="plan_srv_name" type="string" value="plan_mobile_path"/>
             <param name="action_srv_name" type="string" value="action_mobile_path"/>
 		</node>
+      
 	</group>
 </launch>

@@ -232,15 +232,28 @@ namespace kimm_husky_gui
 
         }; 
         virtual void Torquecb(const mujoco_ros_msgs::JointSetConstPtr &msg){
-            ui_.robot_t1->setText(QString::number(msg->torque[0] , 'f', 3));
-            ui_.robot_t2->setText(QString::number(msg->torque[1] , 'f', 3));
-            ui_.robot_t3->setText(QString::number(msg->torque[4] , 'f', 3));
-            ui_.robot_t4->setText(QString::number(msg->torque[5] , 'f', 3));
-            ui_.robot_t5->setText(QString::number(msg->torque[6] , 'f', 3));
-            ui_.robot_t6->setText(QString::number(msg->torque[7] , 'f', 3));
-            ui_.robot_t7->setText(QString::number(msg->torque[8] , 'f', 3));
-            ui_.robot_t8->setText(QString::number(msg->torque[9] , 'f', 3));      
-            ui_.robot_t9->setText(QString::number(msg->torque[10] , 'f', 3));                     
+            if (issimulation_){
+                ui_.robot_t1->setText(QString::number(msg->torque[0] , 'f', 3));
+                ui_.robot_t2->setText(QString::number(msg->torque[1] , 'f', 3));
+                ui_.robot_t3->setText(QString::number(msg->torque[4] , 'f', 3));
+                ui_.robot_t4->setText(QString::number(msg->torque[5] , 'f', 3));
+                ui_.robot_t5->setText(QString::number(msg->torque[6] , 'f', 3));
+                ui_.robot_t6->setText(QString::number(msg->torque[7] , 'f', 3));
+                ui_.robot_t7->setText(QString::number(msg->torque[8] , 'f', 3));
+                ui_.robot_t8->setText(QString::number(msg->torque[9] , 'f', 3));      
+                ui_.robot_t9->setText(QString::number(msg->torque[10] , 'f', 3));    
+            }  
+            else{
+                ui_.robot_t1->setText(QString::number(0.0 , 'f', 3));
+                ui_.robot_t2->setText(QString::number(0.0 , 'f', 3));
+                ui_.robot_t3->setText(QString::number(msg->torque[0] , 'f', 3));
+                ui_.robot_t4->setText(QString::number(msg->torque[1] , 'f', 3));
+                ui_.robot_t5->setText(QString::number(msg->torque[2] , 'f', 3));
+                ui_.robot_t6->setText(QString::number(msg->torque[3] , 'f', 3));
+                ui_.robot_t7->setText(QString::number(msg->torque[4] , 'f', 3));
+                ui_.robot_t8->setText(QString::number(msg->torque[5] , 'f', 3));      
+                ui_.robot_t9->setText(QString::number(msg->torque[6] , 'f', 3)); 
+            }               
         }; 
         virtual void Basecb(const sensor_msgs::JointStateConstPtr& msg){
             ui_.base_p1->setText(QString::number(msg->position[0] , 'f', 3));
@@ -457,37 +470,64 @@ namespace kimm_husky_gui
             // base target
             geometry_msgs::Pose2D c_pose, t_pose;
                         
-            plan_mobile_srv_.request.current_mobile_state.x = base_(0);
-            plan_mobile_srv_.request.current_mobile_state.y = base_(1);
-            plan_mobile_srv_.request.current_mobile_state.theta = base_(2);
+            // plan_mobile_srv_.request.current_mobile_state.x = base_(0);
+            // plan_mobile_srv_.request.current_mobile_state.y = base_(1);
+            // plan_mobile_srv_.request.current_mobile_state.theta = base_(2);
 
-            plan_mobile_srv_.request.target_mobile_pose.x = ui_.base_d1->text().toFloat();
-            plan_mobile_srv_.request.target_mobile_pose.y = ui_.base_d2->text().toFloat();
-            plan_mobile_srv_.request.target_mobile_pose.theta = ui_.base_d3->text().toFloat() * RAD;
+            // plan_mobile_srv_.request.target_mobile_pose.x = ui_.base_d1->text().toFloat();
+            // plan_mobile_srv_.request.target_mobile_pose.y = ui_.base_d2->text().toFloat();
+            // plan_mobile_srv_.request.target_mobile_pose.theta = ui_.base_d3->text().toFloat() * RAD;
 
-            // obstacle
-            obs_vec_.clear();
-            int n_obs = ui_.obs_list->count(); 
+            // // obstacle
+            // obs_vec_.clear();
+            // int n_obs = ui_.obs_list->count(); 
 
-            Eigen::VectorXd obs(4);
-            for (int i=0; i< n_obs; i++){
-                QListWidgetItem *item = ui_.obs_list->item(i);
-                string obs_inf = item->text().toUtf8().constData();
-                istringstream ss(obs_inf);
-                string buffer;
-                int j=0;
-                while (getline(ss, buffer, ',')){
-                    obs(j) = stod(buffer);
-                    j++;
-                }
-                kimm_path_planner_ros_interface::Obstacle2D obs_2d;
-                obs_2d.x1.data = obs(0);
-                obs_2d.y1.data = obs(1);
-                obs_2d.x2.data = obs(2);
-                obs_2d.y2.data = obs(3);
-                obs_vec_.push_back(obs_2d);
-            }
-            plan_mobile_srv_.request.Obstacles2D = obs_vec_;
+            // Eigen::VectorXd obs(4);
+            // for (int i=0; i< n_obs; i++){
+            //     QListWidgetItem *item = ui_.obs_list->item(i);
+            //     string obs_inf = item->text().toUtf8().constData();
+            //     istringstream ss(obs_inf);
+            //     string buffer;
+            //     int j=0;
+            //     while (getline(ss, buffer, ',')){
+            //         obs(j) = stod(buffer);
+            //         j++;
+            //     }
+            //     kimm_path_planner_ros_interface::Obstacle2D obs_2d;
+            //     obs_2d.x1.data = obs(0);
+            //     obs_2d.y1.data = obs(1);
+            //     obs_2d.x2.data = obs(2);
+            //     obs_2d.y2.data = obs(3);
+            //     obs_vec_.push_back(obs_2d);
+            // }
+
+
+            geometry_msgs::Pose2D target_pose_service;
+            geometry_msgs::Pose2D current_pose_service;
+            
+             // Current pose
+            current_pose_service.x = base_(0);
+            current_pose_service.y = base_(1);
+            current_pose_service.theta = base_(2);
+
+            // Target Pose
+            target_pose_service.x = ui_.base_d1->text().toFloat();
+            target_pose_service.y = ui_.base_d2->text().toFloat();
+            target_pose_service.theta = ui_.base_d3->text().toFloat() * RAD;
+            //obs_xyt = [(2.7251, -0.5276, 0.6), (4.5502, 2.0, 0.6), (4.5, -2.825, 0.1)]
+
+            // Obstacle
+            kimm_path_planner_ros_interface::Obstacle2D Obstacle1;
+            Obstacle1.x1.data = -3.7251;
+            Obstacle1.y1.data = -3.9276;
+            Obstacle1.x2.data = -3.7251;
+            Obstacle1.y2.data = -3.9276;
+
+            // Get current state & target pose
+            plan_mobile_srv_.request.current_mobile_state = current_pose_service;
+            plan_mobile_srv_.request.target_mobile_pose = target_pose_service;
+            plan_mobile_srv_.request.Obstacles2D.push_back(Obstacle1);
+            
             mobile_plan_client_.call(plan_mobile_srv_);
             
             
@@ -508,7 +548,7 @@ namespace kimm_husky_gui
             int id = 0;
 
             visualization_msgs::Marker marker;
-            marker.header.frame_id = "odom";
+            marker.header.frame_id = "husky_odom";
             marker.ns = "my_namespace";
             marker.pose.position.z = 0;
             
@@ -541,46 +581,46 @@ namespace kimm_husky_gui
 
             base_traj_resp_pub_.publish(response_list);
 
-            id = 0;
-            marker.id = id;       
-            marker.color.a = 1.0;
-            marker.color.r = 1.0;
-            marker.color.g = 0.0;
-            marker.color.b = 0.0;   
-            marker.pose.position.x = plan_mobile_srv_.request.target_mobile_pose.x;
-            marker.pose.position.y = plan_mobile_srv_.request.target_mobile_pose.y;
+            // id = 0;
+            // marker.id = id;       
+            // marker.color.a = 1.0;
+            // marker.color.r = 1.0;
+            // marker.color.g = 0.0;
+            // marker.color.b = 0.0;   
+            // marker.pose.position.x = plan_mobile_srv_.request.target_mobile_pose.x;
+            // marker.pose.position.y = plan_mobile_srv_.request.target_mobile_pose.y;
 
-            double theta = plan_mobile_srv_.request.target_mobile_pose.theta;
-            marker.pose.orientation.x = 0.0;
-            marker.pose.orientation.y = 0.0;
-            marker.pose.orientation.z = sin(theta/2.);
-            marker.pose.orientation.w = cos(theta/2.);
-            id++;
-            req_list.markers.push_back(marker);
+            // double theta = plan_mobile_srv_.request.target_mobile_pose.theta;
+            // marker.pose.orientation.x = 0.0;
+            // marker.pose.orientation.y = 0.0;
+            // marker.pose.orientation.z = sin(theta/2.);
+            // marker.pose.orientation.w = cos(theta/2.);
+            // id++;
+            // req_list.markers.push_back(marker);
             
-            marker.type = visualization_msgs::Marker::CUBE;
-            for (int i=0; i< n_obs; i++){
-                marker.id = id;  
-                marker.pose.position.x = (obs_vec_[i].x1.data + obs_vec_[i].x2.data)/2.0;
-                marker.pose.position.y = (obs_vec_[i].y1.data + obs_vec_[i].y2.data)/2.0;
-                marker.pose.position.z = 0.2;
-                marker.pose.orientation.x = 0.0;
-                marker.pose.orientation.y = 0.0;
-                marker.pose.orientation.z = 0.0;
-                marker.pose.orientation.w = 1.0;
+            // marker.type = visualization_msgs::Marker::CUBE;
+            // for (int i=0; i< n_obs; i++){
+            //     marker.id = id;  
+            //     marker.pose.position.x = (obs_vec_[i].x1.data + obs_vec_[i].x2.data)/2.0;
+            //     marker.pose.position.y = (obs_vec_[i].y1.data + obs_vec_[i].y2.data)/2.0;
+            //     marker.pose.position.z = 0.2;
+            //     marker.pose.orientation.x = 0.0;
+            //     marker.pose.orientation.y = 0.0;
+            //     marker.pose.orientation.z = 0.0;
+            //     marker.pose.orientation.w = 1.0;
 
-                marker.scale.x = abs(obs_vec_[i].x1.data - obs_vec_[i].x2.data);
-                marker.scale.y = abs(obs_vec_[i].y1.data - obs_vec_[i].y2.data);
-                marker.scale.z = 0.4;
-                marker.color.a = 1.0;
-                marker.color.r = 0.0;
-                marker.color.g = 0.0;
-                marker.color.b = 1.0;
-                id++;
-                req_list.markers.push_back(marker);
-            }
+            //     marker.scale.x = abs(obs_vec_[i].x1.data - obs_vec_[i].x2.data);
+            //     marker.scale.y = abs(obs_vec_[i].y1.data - obs_vec_[i].y2.data);
+            //     marker.scale.z = 0.4;
+            //     marker.color.a = 1.0;
+            //     marker.color.r = 0.0;
+            //     marker.color.g = 0.0;
+            //     marker.color.b = 1.0;
+            //     id++;
+            //     req_list.markers.push_back(marker);
+            // }
 
-            base_traj_req_pub_.publish(req_list);
+            // base_traj_req_pub_.publish(req_list);
         }
         virtual void basectrlcb2(){
             int16_msg_.data = 901;
@@ -773,7 +813,7 @@ namespace kimm_husky_gui
             int id = 0;
 
             visualization_msgs::Marker marker;
-            marker.header.frame_id = "odom";
+            marker.header.frame_id = "husky_odom";
             marker.ns = "my_namespace";
             marker.pose.position.z = 0;
             

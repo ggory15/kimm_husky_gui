@@ -24,8 +24,8 @@ namespace kimm_husky_gui
         string model_path, urdf_name;
         string group_name;
         nh_.getParam("/robot_group", group_name);   
-        nh_.getParam("/" + group_name +"/rviz_urdf_path", model_path);    
-        nh_.getParam("/" + group_name +"/rviz_urdf", urdf_name);  
+        nh_.getParam("/" + group_name +"_gui/rviz_urdf_path", model_path);    
+        nh_.getParam("/" + group_name +"_gui/rviz_urdf", urdf_name);  
 
         vector<string> package_dirs;
         package_dirs.push_back(model_path);
@@ -38,10 +38,10 @@ namespace kimm_husky_gui
         run_pub_ = nh_.advertise<std_msgs::Bool>("/mujoco_ros_interface/sim_run", 100);
         quit_pub_ = nh_.advertise<std_msgs::Bool>("/mujoco_ros_interface/sim_quit", 100);
 
-        base_traj_resp_pub_ = nh_.advertise<visualization_msgs::MarkerArray>("/" + group_name + "/kimm_mobile_plan_markers/mobile/response", 100);
-        base_traj_req_pub_ = nh_.advertise<visualization_msgs::MarkerArray>("/" + group_name + "/kimm_mobile_plan_markers/mobile/request", 100);
-        ee_traj_resp_pub_ = nh_.advertise<visualization_msgs::MarkerArray>("/" + group_name + "/kimm_se3_plan_markers/robot/response", 100);
-        joint_state_pub_ = nh_.advertise<sensor_msgs::JointState>("/" + group_name +"/joint_states", 100);
+        base_traj_resp_pub_ = nh_.advertise<visualization_msgs::MarkerArray>("/" + group_name + "_gui/kimm_mobile_plan_markers/mobile/response", 100);
+        base_traj_req_pub_ = nh_.advertise<visualization_msgs::MarkerArray>("/" + group_name + "_gui/kimm_mobile_plan_markers/mobile/request", 100);
+        ee_traj_resp_pub_ = nh_.advertise<visualization_msgs::MarkerArray>("/" + group_name + "_gui/kimm_se3_plan_markers/robot/response", 100);
+        joint_state_pub_ = nh_.advertise<sensor_msgs::JointState>("/" + group_name +"_gui/joint_states", 100);
 
         if (issimulation_){
             custom_ctrl_pub_ = nh_.advertise<std_msgs::Int16>("/mujoco_ros_interface/ctrl_type", 100);
@@ -60,9 +60,9 @@ namespace kimm_husky_gui
             base_state_sub_ = nh_.subscribe("/" + group_name + "/real_robot/base_state", 100, &HuskyGui::baseStateCallback, this);
         }
 
-        joint_plan_client_ = nh_.serviceClient<kimm_joint_planner_ros_interface::plan_joint_path>("/" + group_name + "/kimm_joint_planner_ros_interface_server/plan_joint_path");
-        mobile_plan_client_ = nh_.serviceClient<kimm_path_planner_ros_interface::plan_mobile_path>("/" + group_name + "/kimm_path_planner_ros_interface_server/plan_mobile_path");
-        se3_plan_client_ = nh_.serviceClient<kimm_se3_planner_ros_interface::plan_se3_path>("/" + group_name + "/kimm_se3_planner_ros_interface_server/plan_se3_path");
+        joint_plan_client_ = nh_.serviceClient<kimm_joint_planner_ros_interface::plan_joint_path>("/" + group_name + "_gui/kimm_joint_planner_ros_interface_server/plan_joint_path");
+        mobile_plan_client_ = nh_.serviceClient<kimm_path_planner_ros_interface::plan_mobile_path>("/" + group_name + "_gui/kimm_path_planner_ros_interface_server/plan_mobile_path");
+        se3_plan_client_ = nh_.serviceClient<kimm_se3_planner_ros_interface::plan_se3_path>("/" + group_name + "_gui/kimm_se3_planner_ros_interface_server/plan_se3_path");
         
         int nq = 4 + 9;
         joint_state_msg_.name.resize(nq);
@@ -79,6 +79,7 @@ namespace kimm_husky_gui
 
         q_.setZero(9);
         x_.setZero(6);
+       
     }
     void HuskyGui::initPlugin(qt_gui_cpp::PluginContext& context)
     {
