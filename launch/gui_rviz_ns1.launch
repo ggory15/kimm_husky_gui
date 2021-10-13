@@ -1,8 +1,8 @@
 <launch>
     <node name="husky_rqt_dashboard" pkg="rqt_gui" type="rqt_gui" respawn="false" output="screen" args="--perspective-file $(find kimm_husky_gui)/config/gui_rviz.perspective" />
-	<arg name="rvizconfig" default="$(find kimm_husky_gui)/config/temp.rviz" />
+	<arg name="rvizconfig" default="$(find kimm_husky_gui)/config/husky_rviz.rviz" />
 	<param name="use_gui" value="true"/>
-    <group ns ="ns0_gui">
+    <group ns ="ns1_gui">
 	    <param name="robot_description" command="cat $(find husky_description)/husky_single/husky_panda_rviz.urdf" />
 		<param name="rviz_urdf_path" type="string" value="$(find husky_description)"/>
    		<param name="rviz_urdf" type="string" value="/husky_single/husky_panda_rviz.urdf"/>

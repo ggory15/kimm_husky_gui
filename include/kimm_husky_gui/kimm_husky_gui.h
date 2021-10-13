@@ -201,7 +201,7 @@ namespace kimm_husky_gui
                 q_(0) = 0;
                 q_(1) = 0;
                 for (int i=0; i<7; i++)
-                    q_(i+2) = msg->position[11+i];
+                    q_(i+2) = msg->position[2+i];
             }
 
             if (issimulation_){
